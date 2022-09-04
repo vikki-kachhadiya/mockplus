@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form 4</title>
+    <style>
+        form {
+            background-image: url(2.jpg);
+            background-repeat: no-repeat;
+            background-size: 1000px 400px;
+            border: 3px;
+            border-style: double;
+            text-align: center;
+            margin: 5px;
+            border-color: darkgreen;
+            background-color: lavenderblush;
+        }
+        
+        .a {
+            color: lightgoldenrodyellow;
+            font-size: 20px;
+        }
+        
+        .e {
+            color: lightseagreen;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        
+        .f {
+            color: lightseagreen;
+            font-family: serif;
+        }
+        
+        .g {
+            color: lightcyan;
+            background-color: darkred;
+            border-radius: 3px;
+            border-style: dotted;
+            padding: 5px 15px;
+        }
+        
+        .d {
+            color: rgb(21, 4, 255);
+        }
+        
+        .b {
+            border-style: inset;
+            border-radius: 5px;
+            background-color: rgb(71, 214, 224);
+            color: rgb(248, 8, 228);
+            border-color: blue;
+        }
+        
+        .h {
+            border-style: outset;
+            border-radius: 5px;
+            background-color: lightgreen;
+            color: darkmagenta;
+            border-image: 2px;
+        }
+        
+        .i {
+            color: antiquewhite;
+            text-decoration: none;
+            font-size: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <form>
+            <label for="user_name" class="a">User name:</label>
+            <input type="text" name="user_name" id="user-name" placeholder="Enter your user namer" class="b"><br><br>
+
+            <label for="password" class="a">Password :</label>
+            <input type="password" name="password" id="password" placeholder="Enter your password" class="b"><br><br>
+
+            <label for="city of" class="a">City of employment:</label>
+            <input type="text" name="city of" id="city of" class="b" placeholder="Enter your city of employment"><br><br>
+
+            <label for="web server" class="a">Web server :</label>
+            <select name="select" id="select" class="h">
+                <option value="server" class="d">-choose server-</option>
+                <option value="1" class="d">1</option>
+                <option value="2" class="d">2</option>
+                <option value="3" class="d">3</option>
+            </select><br><br>
+
+            <label for="your role" class="a">Please specify ypur role:</label><br>
+            <input type="radio" name="role" id="admin"><label for="admin" class="e">Admin</label><br>
+            <input type="radio" name="role" id="manager"><label for="manager" class="e">Manager</label><br>
+            <input type="radio" name="role" id="engineer"><label for="engineer" class="e">Engineer</label><br><br>
+
+            <label for="sign on to following" class="a"> Single sign on to the following</label><br>
+            <input type="checkbox" name="mail" id="mail"><label for="mail" class="f">Mail</label><br>
+            <input type="checkbox" name="payroll" id="payroll"><label for="payroll" class="f">Payroll</label><br>
+            <input type="checkbox" name="self-service" id="self-service"><label for="self-service" class="f">Self-service</label><br><br>
+
+            <button type="button" class="g"><a href="https://www.google.com/" target="_blank"  class="i">Login</a></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button type="reset" class="g"><a href="https://www.youtube.com/" target="_blank" class="i">Reset</a></button>
+        </form>
+    </div>
+</body>
+
+</html>

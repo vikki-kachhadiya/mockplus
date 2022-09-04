@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour reservation form</title>
+    <style>
+        body {
+            margin: 20px;
+            background-image: url(1.jpg);
+            background-repeat: no-repeat;
+            background-size: 100%;
+            border: 3px inset darkred;
+            padding: 10px;
+            padding-bottom: 30px;
+            padding-top: 20px;
+            background-attachment: scroll;
+        }
+        
+        h3 {
+            text-align: center;
+            color: blueviolet;
+            text-shadow: 2px;
+        }
+        
+        form {
+            text-align: center;
+            padding: 10px;
+            border-radius: 5px;
+            border-color: rgb(131, 114, 97);
+        }
+        
+        .a {
+            border-style: inset;
+            border-color: rgba(240, 115, 6, 0.437);
+            border-radius: 4px;
+            font-family: sans-serif;
+        }
+        
+        .b {
+            color: rgb(26, 10, 247);
+            font-family: serif;
+        }
+        
+        .c {
+            color: rgb(18, 62, 4);
+        }
+        
+        .d {
+            color: darkmagenta;
+            font
+        }
+        
+        button {
+            background-color: darkblue;
+            border-style: ridge;
+            border-radius: 5px;
+            color: azure;
+        }
+        
+        .e {
+            color: rgb(253, 1, 1);
+        }
+        
+        .f {
+            color: aliceblue;
+            text-decoration: none;
+        }
+        
+        h2 {
+            text-align: center;
+            color: darkred;
+            text-shadow: 1px 1px 3px;
+        }
+        
+        .f:hover {
+            font-size: 20px;
+            text-shadow: 1px 1px 3px;
+        }
+        
+        .b:hover {
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Tour Package form</h2>
+    <h3>*Denoted mandatory</h3>
+    <form>
+        <p><strong><label class="b" for="full_name">Full name*:</label>&nbsp;
+            <input type="text" name="full name" id="full_name" placeholder="Firstname Lastname" class="a">
+            <br></strong></p>
+        <p><strong><label for="email" class="b">E-mail address:</label></strong>
+            <input type="email" name="email" id="email" placeholder="Email_address" class="a"><br></p>
+
+        <strong><label for="select_tour" class="b">Select tour package*:</label></strong>
+        <select name="tour" id="tour" class="a">
+            <option value="gova" class="c">Gova</option>
+            <option value="mumbai" class="c">Mumbai</option>
+            <option value="Manali" class="c">Manali</option>
+            <option value="kerla" class="c">Kerla</option>
+        </select><br>
+
+        <p> <strong><label for="arrival_date" class="b">Arrival date*:</label></strong>
+            <input type="date" name="arrival_date" id="arrival-date" placeholder="mm/dd/yy" pxclass="a"><br></p>
+
+        <p> <strong><label for="number_of_person" class="b">Number of person*:</label></strong>
+            <input type="number" name="number_of_person" id="number_of_person" placeholder="UNKNOW_TYPE" class="a" min="1"><br></p>
+
+        <strong> <label for="want_to_avail" class="b">What would you want to avil?*</label></strong><br>
+        <strong><label for="bording" class="d">Bording</label></strong><input type="checkbox" name="bording" id="bording"><br>
+        <strong><label for="fooding" class="d">Fooding</label></strong><input type="checkbox" name="fooding" id="fooding"><br>
+        <strong><label for="sight seen" class="d">Sight seen</label></strong><input type="checkbox" name="sight seen" id="sight seen"><br>
+
+        <p><strong><label for="discount_coupon_code" class="b">Discount coupon code:</label></strong>
+            <input type="text" name="coupon_type" id="discount_coupon_code" placeholder="UNKNOW_TYPE" class="a">
+            <br>
+        </p>
+
+        <strong><label for="terms-and_condition" class="b">Terms and condition*</label></strong>
+        <input type="radio" name="i-agree" id="i-agree"><strong><label for="i-agree" class="e">I agree</label></strong>
+        <input type="radio" name="i-agree" id="i-disagree"><strong><label for="i-disagree" class="e">I disagree</label></strong><br><br>
+
+        <button type="button" class="f"> <a href="file:///C:/Users/Owner/Desktop/vishal%20data/reservation.html" target="_blank" class="f">Complete reservation</a></button>
+    </form>
+</body>
+
+</html>
