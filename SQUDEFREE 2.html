@@ -1,0 +1,2104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Squdefree 2</title>
+    <!-- font awsome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://kenwheeler.github.io/slick/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://kenwheeler.github.io/slick/slick/slick-theme.css"/>
+
+
+    <style>
+            * {box-sizing: border-box;margin: 0;}
+            img {max-width: 100%;width: auto;}
+
+            .section{padding-top: 50px;padding-bottom: 50px;}
+
+            .container{max-width: 1300px;width: 100%;padding-left: 15px;padding-right: 15px;margin-left: auto;margin-right: auto;}
+
+            .row{margin-left: -15px;margin-right: -15px;}
+
+            .row::after{content: "";display: block;clear: both;}
+
+            a{text-decoration: none;color: inherit;display: block;}
+
+            .col{float: left;padding-left: 15px;padding-right: 15px;}
+
+            ul,li{display:inline-block;padding: 0;list-style: none;}
+
+            .center-box{width: 100%;height: 100vh;}
+
+            /* XS  */
+            .col-1{width: 8.33%;}.col-2{width: 16.66%;}.col-3{width: 25%;}.col-4{width: 33.33%;}.col-5{width: 41.66%;}.col-6{width: 50%;}.col-7{width: 58.33%;}.col-8{width: 66.66%;}.col-9{width: 75%;}.col-10{width: 83.33%;}.col-11{width: 91.66%;}.col-12{width: 100%;}
+
+            /* xs-display */
+            .d-block {display: block;}.d-none {display: none;}.d-flex{display: flex;}.d-flow-root{display: flow-root;}.d-inline{display: inline;}.d-in-block{display: inline-block;}.d-in-flex{display: inline-flex;}.d-in-table{display: inline-table;}.d-list-item{display: list-item;}.d-table{display: table;}.d-table-caption{display: table-caption;}.d-table-cell{display: table-cell;}.d-table-col{display: table-column;}.d-table-row{display: table-row;}
+
+            /* xs-position */
+            .p-absolute{position: absolute;}.p-fixed{position: fixed;}.p-relative{position: relative;}.p-static{position: static;}.p-sticky{position: sticky;}.p-unset{position: unset;}.p-inherit{position: inherit;}.p-initial{position: initial;}
+
+            /* xs-top */
+            .top-5{top: 5%;}.top-10{top: 10%;}.top-15{top: 15%;}.top-20{top: 20%;}.top-25{top: 25%;}.top-30{top: 30%;}.top-35{top: 35%;}.top-40{top: 40%;}.top-45{top: 45%;}.top-50{top: 50%;}.top-55{top: 55%;}.top-60{top: 60%;}.top-65{top: 65%;}.top-70{top: 70%;}.top-75{top: 75%;}.top-80{top: 80%;}.top-85{top: 85%;}.top-90{top: 90%;}.top-95{top: 95%;}.top-100{top: 100%;}
+
+            /* xs-bottom */
+            .bottom-5{bottom: 5%;}.bottom-10{bottom: 10%;}.bottom-15{bottom: 15%;}.bottom-20{bottom: 20%;}.bottom-25{bottom: 25%;}.bottom-30{bottom: 30%;}.bottom-35{bottom: 35%;}.bottom-40{bottom: 40%;}.bottom-45{bottom: 45%;}.bottom-50{bottom: 50%;}.bottom-55{bottom: 55%;}.bottom-60{bottom: 60%;}.bottom-65{bottom: 65%;}.bottom-70{bottom: 70%;}.bottom-75{bottom: 75%;}.bottom-80{bottom: 80%;}.bottom-85{bottom: 85%;}.bottom-90{bottom: 90%;}.bottom-95{bottom: 95%;}.bottom-100{bottom: 100%;}
+
+            /* xs-left */
+            .left-5{left: 5%;}.left-10{left: 10%;}.left-15{left: 15%;}.left-20{left: 20%;}.left-25{left: 25%;}.left-30{left: 30%;}.left-35{left: 35%;}.left-40{left: 40%;}.left-45{left: 45%;}.left-50{left: 50%;}.left-55{left: 55%;}.left-60{left: 60%;}.left-65{left: 65%;}.left-70{left: 70%;}.left-75{left: 75%;}.left-80{left: 80%;}.left-85{left: 85%;}.left-90{left: 90%;}.left-95{left: 95%;}.left-100{left: 100%;}
+
+            /* xs-right */
+            .right-5{right:5%;}.right-10{right: 10%;}.right-15{right: 15%;}.right-20{right: 20%;}.right-25{right: 25%;}.right-30{right: 30%;}.right-35{right: 35%;}.right-40{right: 40%;}.right-45{right: 45%;}.right-50{right: 50%;}.right-55{right: 55%;}.right-60{right: 60%;}.right-65{right: 65%;}.right-70{right: 70%;}.right-75{right: 75%;}.right-80{right: 80%;}.right-85{right: 85%;}.right-90{right: 90%;}.right-95{right: 95%;}.right-100{right: 100%;}
+
+            /* xs-padding */
+            .p-1 {padding: 10px;}.p-2 {padding: 20px;}.p-3 {padding: 30px;}.p-4 {padding: 40px;}.p-5 {padding: 50px;}.pt-1 {padding-top: 10px;}.pt-2 {padding-top: 20px;}.pt-3 {padding-top: 30px;}.pt-4 {padding-top: 40px;}.pt-5 {padding-top: 50px;}.pl-1 {padding-left: 10px;}.pl-2 {padding-left: 20px;}.pl-3 {padding-left: 30px;}.pl-4 {padding-left: 40px;}.pl-5 {padding-left: 50px;}.pr-1 {padding-right: 10px;}.pr-2 {padding-right: 20px;}.pr-3 {padding-right: 30px;}.pr-4 {padding-right: 40px;}.pr-5 {padding-right: 50px;}.pb-1 {padding-bottom: 10px;}.pb-2 {padding-bottom: 20px;}.pb-3 {padding-bottom: 30px;}.pb-4 {padding-bottom: 40px;}.pb-5 {padding-bottom: 50px;}
+
+            /* xs-margin */
+            .m-1 {margin: 10px;}.m-2 {margin: 20px;}.m-3 {margin: 30px;}.m-4 {margin: 40px;}.m-5 {margin: 50px;}.mt-1 {margin-top: 10px;}.mt-2 {margin-top: 20px;}.mt-3 {margin-top: 30px;}.mt-4 {margin-top: 40px;}.mt-5 {margin-top: 50px;}.ml-1 {margin-left: 10px;}.ml-2 {margin-left: 20px;}.ml-3 {margin-left: 30px;}.ml-4 {margin-left: 40px;}.ml-5 {margin-left: 50px;}.mr-1 {margin-right: 10px;}.mr-2 {margin-right: 20px;}.mr-3 {margin-right: 30px;}.mr-4 {margin-right: 40px;}.mr-5 {margin-right: 50px;}.mb-1 {margin-bottom: 10px;}.mb-2 {margin-bottom: 20px;}.mb-3 {margin-bottom: 30px;}.mb-4 {margin-bottom: 40px;}.mb-5 {margin-bottom: 50px;}
+
+            /* xs-object-fit */
+            .obj-contain{object-fit: contain;}.obj-cover{object-fit: cover;}obj-fill{object-fit: fill;}.obj-none{object-fit: none;}.obj-scale-down{object-fit: scale-down;}.obj-inherit{object-fit: inherit;}.obj-initial{object-fit: initial;}.obj-unset{object-fit: unset;}
+
+            /* xs-opcity */
+            .opacity-10{opacity: 0.1;}.opacity-20{opacity: 0.2;}.opacity-30{opacity: 0.3;}.opacity-40{opacity: 0.4;}.opacity-50{opacity: 0.5;}.opacity-60{opacity: 0.6;}.opacity-70{opacity: 0.7;}.opacity-80{opacity: 0.8;}.opacity-90{opacity: 0.9;}.opacity-100{opacity: 1;}
+
+            /* xs-overflow */
+            .overflow-auto{overflow:auto;}.overflow-hidden{overflow: hidden;}.overflow-scroll{overflow: scroll;}.overflow-visible{overflow: visible;}.overflow-inherit{overflow: inherit;}.overflow-initial{overflow: initial;}.overflow-unset{overflow: unset;}
+
+            /* xs-vertocal-align */
+            .vertical-align-auto{vertical-align: auto;}.vertical-align-top{vertical-align: top;}.vertical-align-baseline{vertical-align: baseline;}.vertical-align-bottom{vertical-align: bottom;}.vertical-align-middle{vertical-align: middle;}.vertical-align-sub{vertical-align: sub;}.vertical-align-super{vertical-align: super;}.vertical-align-text-bottom{vertical-align: text-bottom;}.vertical-align-text-top{vertical-align: text-top;}
+
+            /* txet-align */
+            .text-center {text-align: center;}.text-left {text-align: left;}.text-right {text-align: right;}.text-justify {text-align: justify;}.text-unset {text-align: unset;}
+
+            /* width */
+            .width-0{width: 0%;}.width-25{width: 25%;}.width-50{width: 50%;}.width-75{width: 75%;}.width-100{width: 100%;}.width-unset{width: unset;}.width-auto{width: auto;}
+
+            /* hieght */
+            .height-0{width: 0%;}.height-25{width: 25%;}.height-50{width: 50%;}.height-75{width: 75%;}.height-100{width: 100%;}.height-unset{width: unset;}.height-auto{width: auto;}
+
+            /* SM */
+            @media (min-width: 576px){
+
+            .col-sm-1{width: 8.33%;}.col-sm-2{width: 16.66%;}.col-sm-3{width: 25%;}.col-sm-4{width: 33.33%;}.col-sm-5{width: 41.66%;}.col-sm-6{width: 50%;}.col-sm-7{width: 58.33%;}.col-sm-8{width: 66.66%;}.col-sm-9{width: 75%;}.col-sm-10{width: 83.33%;}.col-sm-11{width: 91.66%;}.col-sm-12{width: 100%;}
+
+            /* sm-display */
+            .d-sm-block {display: block;}  .d-sm-none {display: none;}.d-sm-flex{display: flex;}.d-sm-flow-root{display: flow-root;}.d-sm-inline{display: inline;}.d-sm-in-block{display: inline-block;}.d-sm-in-flex{display: inline-flex;}.d-sm-in-table{display: inline-table;}.d-sm-list-item{display: list-item;}.d-sm-table{display: table;}.d-sm-table-caption{display: table-caption;}.d-sm-table-cell{display: table-cell;}.d-sm-table-col{display: table-column;}.d-sm-table-row{display: table-row;}
+
+            /* sm-position */
+            .p-sm-absolute{position: absolute;}.p-sm-fixed{position: fixed;}.p-sm-relative{position: relative;}.p-sm-static{position: static;}.p-sm-sticky{position: sticky;}.p-sm-unset{position: unset;}.p-sm-inherit{position: inherit;}.p-sm-initial{position: initial;}
+
+            /* sm-top */
+            .top-sm-5{top: 5%;}.top-sm-10{top: 10%;}.top-sm-15{top: 15%;}.top-sm-20{top: 20%;}.top-sm-25{top: 25%;}.top-sm-30{top: 30%;}.top-sm-35{top: 35%;}.top-sm-40{top: 40%;}.top-sm-45{top: 45%;}.top-sm-50{top: 50%;}.top-sm-55{top: 55%;}.top-sm-60{top: 60%;}.top-sm-65{top: 65%;}.top-sm-70{top: 70%;}.top-sm-75{top: 75%;}.top-sm-80{top: 80%;}.top-sm-85{top: 85%;}.top-sm-90{top: 90%;}.top-sm-95{top: 95%;}.top-sm-100{top: 100%;}
+
+            /* sm-bottom */
+            .bottom-sm-5{bottom: 5%;}.bottom-sm-10{bottom: 10%;}.bottom-sm-15{bottom: 15%;}.bottom-sm-20{bottom: 20%;}.bottom-sm-25{bottom: 25%;}.bottom-sm-30{bottom: 30%;}.bottom-sm-35{bottom: 35%;}.bottom-sm-40{bottom: 40%;}.bottom-sm-45{bottom: 45%;}.bottom-sm-50{bottom: 50%;}.bottom-sm-55{bottom: 55%;}.bottom-sm-60{bottom: 60%;}.bottom-sm-65{bottom: 65%;}.bottom-sm-70{bottom: 70%;}.bottom-sm-75{bottom: 75%;}.bottom-sm-80{bottom: 80%;}.bottom-sm-85{bottom: 85%;}.bottom-sm-90{bottom: 90%;}.bottom-sm-95{bottom: 95%;}.bottom-sm-100{bottom: 100%;}
+
+            /* sm-left */
+            .left-sm-5{left: 5%;}.left-sm-10{left: 10%;}.left-sm-15{left: 15%;}.left-sm-20{left: 20%;}.left-sm-25{left: 25%;}.left-sm-30{left: 30%;}.left-sm-35{left: 35%;}.left-sm-40{left: 40%;}.left-sm-45{left: 45%;}.left-sm-50{left: 50%;}.left-sm-55{left: 55%;}.left-sm-60{left: 60%;}.left-sm-65{left: 65%;}.left-sm-70{left: 70%;}.left-sm-75{left: 75%;}.left-sm-80{left: 80%;}.left-sm-85{left: 85%;}.left-sm-90{left: 90%;}.left-sm-95{left: 95%;}.left-sm-100{left: 100%;}
+            
+            /* sm-right */
+            .right-sm-5{right:5%;}.right-sm-10{right: 10%;}.right-sm-15{right: 15%;}.right-sm-20{right: 20%;}.right-sm-25{right: 25%;}.right-sm-30{right: 30%;}.right-sm-35{right: 35%;}.right-sm-40{right: 40%;}.right-sm-45{right: 45%;}.right-sm-50{right: 50%;}.right-sm-55{right: 55%;}.right-sm-60{right: 60%;}.right-sm-65{right: 65%;}.right-sm-70{right: 70%;}.right-sm-75{right: 75%;}.right-sm-80{right: 80%;}.right-sm-85{right: 85%;}.right-sm-90{right: 90%;}.right-sm-95{right: 95%;}.right-sm-100{right: 100%;}
+            
+            /* sm-padding */
+            .p-sm-1 {padding: 10px;}.p-sm-2 {padding: 20px;}.p-sm-3 {padding: 30px;}.p-sm-4 {padding: 40px;}.p-sm-5 {padding: 50px;}.pt-sm-1 {padding-top: 10px;}.pt-sm-2 {padding-top: 20px;}.pt-sm-3 {padding-top: 30px;}.pt-sm-4 {padding-top: 40px;}.pt-sm-5 {padding-top: 50px;}.pl-sm-1 {padding-left: 10px;}.pl-sm-2 {padding-left: 20px;}.pl-sm-3 {padding-left: 30px;}.pl-sm-4 {padding-left: 40px;}.pl-sm-5 {padding-left: 50px;}.pr-sm-1 {padding-right: 10px;}.pr-sm-2 {padding-right: 20px;}.pr-sm-3 {padding-right: 30px;}.pr-sm-4 {padding-right: 40px;}.pr-sm-5 {padding-right: 50px;}.pb-sm-1 {padding-bottom: 10px;}.pb-sm-2 {padding-bottom: 20px;}.pb-sm-3 {padding-bottom: 30px;}.pb-sm-4 {padding-bottom: 40px;}.pb-sm-5 {padding-bottom: 50px;}
+            
+            /* sm-margin */
+            .m-sm-1 {margin: 10px;}.m-sm-2 {margin: 20px;}.m-sm-3 {margin: 30px;}.m-sm-4 {margin: 40px;}.m-sm-5 {margin: 50px;}.mt-sm-1 {margin-top: 10px;}.mt-sm-2 {margin-top: 20px;}.mt-sm-3 {margin-top: 30px;}.mt-sm-4 {margin-top: 40px;}.mt-sm-5 {margin-top: 50px;}.ml-sm-1 {margin-left: 10px;}.ml-sm-2 {margin-left: 20px;}.ml-sm-3 {margin-left: 30px;}.ml-sm-4 {margin-left: 40px;}.ml-sm-5 {margin-left: 50px;}.mr-sm-1 {margin-right: 10px;}.mr-sm-2 {margin-right: 20px;}.mr-sm-3 {margin-right: 30px;}.mr-sm-4 {margin-right: 40px;}.mr-sm-5 {margin-right: 50px;}.mb-sm-1 {margin-bottom: 10px;}.mb-sm-2 {margin-bottom: 20px;}.mb-sm-3 {margin-bottom: 30px;}.mb-sm-4 {margin-bottom: 40px;}.mb-sm-5 {margin-bottom: 50px;}
+
+            /* sm-objcet-fit */
+            .obj-sm-contain{object-fit: contain;}.obj-sm-cover{object-fit: cover;}.obj-sm-fill{object-fit: fill;}.obj-sm-none{object-fit: none;}.obj-sm-scale-down{object-fit: scale-down;}.obj-sm-inherit{object-fit: inherit;}.obj-sm-initial{object-fit: initial;}.obj-sm-unset{object-fit: unset;}
+
+            /* sm-opacity */
+            .opacity-sm-10{opacity: 0.1;}.opacity-sm-20{opacity: 0.2;}.opacity-sm-30{opacity: 0.3;}.opacity-sm-40{opacity: 0.4;}.opacity-sm-50{opacity: 0.5;}.opacity-sm-60{opacity: 0.6;}.opacity-sm-70{opacity: 0.7;}.opacity-sm-80{opacity: 0.8;}.opacity-sm-90{opacity: 0.9;}.opacity-sm-100{opacity: 1;}
+
+            /* sm-overflow */
+            .overflow-sm-auto{overflow:auto;}.overflow-sm-hidden{overflow: hidden;}.overflow-sm-scroll{overflow: scroll;}.overflow-sm-visible{overflow: visible;}.overflow-sm-inherit{overflow: inherit;}.overflow-sm-initial{overflow: initial;}.overflow-sm-unset{overflow: unset;}
+
+            /* sm-vertical-align */
+            .vertical-sm-auto{vertical-align: auto;}.vertical-sm-top{vertical-align: top;}.vertical-sm-baseline{vertical-align: baseline;}.vertical-sm-bottom{vertical-align: bottom;}.vertical-sm-middle{vertical-align: middle;}.vertical-sm-sub{vertical-align: sub;}.vertical-sm-super{vertical-align: super;}.vertical-sm-text-bottom{vertical-align: text-bottom;}.vertical-sm-text-top{vertical-align: text-top;}
+
+            /* text-align */
+            .text-sm-center {text-align: center;}.text-sm-left {text-align: left;}.text-sm-right {text-align: right;}.text-sm-justify {text-align: justify;}.text-sm-unset {text-align: unset;}
+
+            /* width */
+            .width-sm-0{width: 0%;}.width-sm-25{width: 25%;}.width-sm-50{width: 50%;}.width-sm-75{width: 75%;}.width-sm-100{width: 100%;}.width-sm-unset{width: unset;}.width-sm-auto{width: auto;}
+
+            /* height */
+            .height-sm-0{width: 0%;}.height-sm-25{width: 25%;}.height-sm-50{width: 50%;}.height-sm-75{width: 75%;}.height-sm-100{width: 100%;}.height-sm-unset{width: unset;}.height-sm-auto{width: auto;}
+            }
+
+            /* MD */
+            @media (min-width: 768px){
+
+            .col-md-1{width: 8.33%;}.col-md-2{width: 16.66%;}.col-md-3{width: 25%;}.col-md-4{width: 33.33%;}.col-md-5{width: 41.66%;}.col-md-6{width: 50%;}.col-md-7{width: 58.33%;}.col-md-8{width: 66.66%;}.col-md-9{width: 75%;}.col-md-10{width: 83.33%;}.col-md-11{width: 91.66%;}.col-md-12{width: 100%;}
+
+            /* md-display */
+            .d-md-block {display: block;}  .d-md-none {display: none;}.d-md-flex{display: flex;}.d-md-flow-root{display: flow-root;}.d-md-inline{display: inline;}.d-md-in-block{display: inline-block;}.d-md-in-flex{display: inline-flex;}.d-md-in-table{display: inline-table;}.d-md-list-item{display: list-item;}.d-md-table{display: table;}.d-md-table-caption{display: table-caption;}.d-md-table-cell{display: table-cell;}.d-md-table-col{display: table-column;}.d-md-table-row{display: table-row;}
+
+            /* md-position */
+            .p-md-absolute{position: absolute;}.p-md-fixed{position: fixed;}.p-md-relative{position: relative;}.p-md-static{position: static;}.p-md-sticky{position: sticky;}.p-md-unset{position: unset;}.p-md-inherit{position: inherit;}.p-md-initial{position: initial;}
+            
+            /* md-top */
+            .top-md-5{top: 5%;}.top-md-10{top: 10%;}.top-md-15{top: 15%;}.top-md-20{top: 20%;}.top-md-25{top: 25%;}.top-md-30{top: 30%;}.top-md-35{top: 35%;}.top-md-40{top: 40%;}.top-md-45{top: 45%;}.top-md-50{top: 50%;}.top-md-55{top: 55%;}.top-md-60{top: 60%;}.top-md-65{top: 65%;}.top-md-70{top: 70%;}.top-md-75{top: 75%;}.top-md-80{top: 80%;}.top-md-85{top: 85%;}.top-md-90{top: 90%;}.top-md-95{top: 95%;}.top-md-100{top: 100%;}
+            
+            /* md-bottom */
+            .bottom-md-5{bottom: 5%;}.bottom-md-10{bottom: 10%;}.bottom-md-15{bottom: 15%;}.bottom-md-20{bottom: 20%;}.bottom-md-25{bottom: 25%;}.bottom-md-30{bottom: 30%;}.bottom-md-35{bottom: 35%;}.bottom-md-40{bottom: 40%;}.bottom-md-45{bottom: 45%;}.bottom-md-50{bottom: 50%;}.bottom-md-55{bottom: 55%;}.bottom-md-60{bottom: 60%;}.bottom-md-65{bottom: 65%;}.bottom-md-70{bottom: 70%;}.bottom-md-75{bottom: 75%;}.bottom-md-80{bottom: 80%;}.bottom-md-85{bottom: 85%;}.bottom-md-90{bottom: 90%;}.bottom-md-95{bottom: 95%;}.bottom-md-100{bottom: 100%;}
+            
+            /* sm-right */
+            .right-md-5{right:5%;}.right-md-10{right: 10%;}.right-md-15{right: 15%;}.right-md-20{right: 20%;}.right-md-25{right: 25%;}.right-sm-30{right: 30%;}.right-md-35{right: 35%;}.right-md-40{right: 40%;}.right-md-45{right: 45%;}.right-md-50{right: 50%;}.right-md-55{right: 55%;}.right-md-60{right: 60%;}.right-md-65{right: 65%;}.right-md-70{right: 70%;}.right-md-75{right: 75%;}.right-md-80{right: 80%;}.right-md-85{right: 85%;}.right-md-90{right: 90%;}.right-md-95{right: 95%;}.right-md-100{right: 100%;}
+            
+            /* md-left */
+            .left-md-5{left: 5%;}.left-md-10{left: 10%;}.left-md-15{left: 15%;}.left-md-20{left: 20%;}.left-md-25{left: 25%;}.left-md-30{left: 30%;}.left-md-35{left: 35%;}.left-md-40{left: 40%;}.left-md-45{left: 45%;}.left-md-50{left: 50%;}.left-md-55{left: 55%;}.left-md-60{left: 60%;}.left-md-65{left: 65%;}.left-md-70{left: 70%;}.left-md-75{left: 75%;}.left-md-80{left: 80%;}.left-md-85{left: 85%;}.left-md-90{left: 90%;}.left-md-95{left: 95%;}.left-md-100{left: 100%;}
+
+            /* md-Padding */
+            .p-md-1 {padding: 10px;}.p-md-2 {padding: 20px;}.p-md-3 {padding: 30px;}.p-md-4 {padding: 40px;}.p-md-5 {padding: 50px;}.pt-md-1 {padding-top: 10px;}.pt-md-2 {padding-top: 20px;}.pt-md-3 {padding-top: 30px;}.pt-md-4 {padding-top: 40px;}.pt-md-5 {padding-top: 50px;}.pl-md-1 {padding-left: 10px;}.pl-md-2 {padding-left: 20px;}.pl-md-3 {padding-left: 30px;}.pl-md-4 {padding-left: 40px;}.pl-md-5 {padding-left: 50px;}  .pr-md-1 {padding-right: 10px;}.pr-md-2 {padding-right: 20px;}.pr-md-3 {padding-right: 30px;}.pr-md-4 {padding-right: 40px;}.pr-md-5 {padding-right: 50px;}.pb-md-1 {padding-bottom: 10px;}.pb-md-2 {padding-bottom: 20px;}.pb-md-3 {padding-bottom: 30px;}.pb-md-4 {padding-bottom: 40px;}.pb-md-5 {padding-bottom: 50px;}
+
+            /* md-margin */
+            .m-md-1 {margin: 10px;}.m-md-2 {margin: 20px;}.m-md-3 {margin: 30px;}.m-md-4 {margin: 40px;}.m-md-5 {margin: 50px;}.mt-md-1 {margin-top: 10px;}.mt-md-2 {margin-top: 20px;}.mt-md-3 {margin-top: 30px;}.mt-md-4 {margin-top: 40px;}.mt-md-5 {margin-top: 50px;}.ml-md-1 {margin-left: 10px;}.ml-md-2 {margin-left: 20px;}.ml-md-3 {margin-left: 30px;}.ml-md-4 {margin-left: 40px;}.ml-md-5 {margin-left: 50px;}.mr-md-1 {margin-right: 10px;}.mr-md-2 {margin-right: 20px;}.mr-md-3 {margin-right: 30px;}.mr-md-4 {margin-right: 40px;}.mr-md-5 {margin-right: 50px;}.mb-md-1 {margin-bottom: 10px;}.mb-md-2 {margin-bottom: 20px;}.mb-md-3 {margin-bottom: 30px;}.mb-md-4 {margin-bottom: 40px;}.mb-md-5 {margin-bottom: 50px;}
+
+            /* md-objcet-fit */
+            .obj-md-contain{object-fit: contain;}.obj-md-cover{object-fit: cover;}.obj-md-fill{object-fit: fill;}.obj-md-none{object-fit: none;}.obj-md-scale-down{object-fit: scale-down;}.obj-md-inherit{object-fit: inherit;}.obj-md-initial{object-fit: initial;}.obj-md-unset{object-fit: unset;}
+
+            /* md-opacity */
+            .opacity-md-10{opacity: 0.1;}.opacity-md-20{opacity: 0.2;}.opacity-md-30{opacity: 0.3;}.opacity-md-40{opacity: 0.4;}.opacity-md-50{opacity: 0.5;}.opacity-md-60{opacity: 0.6;}.opacity-md-70{opacity: 0.7;}.opacity-md-80{opacity: 0.8;}.opacity-md-90{opacity: 0.9;}.opacity-md-100{opacity: 1;}
+
+            /* md-overflow */
+            .overflow-md-auto{overflow:auto;}.overflow-md-hidden{overflow: hidden;}.overflow-md-scroll{overflow: scroll;}.overflow-md-visible{overflow: visible;}.overflow-md-inherit{overflow: inherit;}.overflow-md-initial{overflow: initial;}.overflow-md-unset{overflow: unset;}
+
+            /* md-vertical-align */
+            .vertical-md-auto{vertical-align: auto;}.vertical-md-top{vertical-align: top;}.vertical-md-baseline{vertical-align: baseline;}.vertical-md-bottom{vertical-align: bottom;}.vertical-md-middle{vertical-align: middle;}.vertical-md-sub{vertical-align: sub;}.vertical-md-super{vertical-align: super;}.vertical-md-text-bottom{vertical-align: text-bottom;}.vertical-md-text-top{vertical-align: text-top;}
+
+            /* text-align */
+            .text-md-center {text-align: center;}.text-md-left {text-align: left;}.text-md-right {text-align: right;}.text-md-justify {text-align: justify;}.text-md-unset {text-align: unset;}
+
+            /* width */
+            .width-md-0{width: 0%;}.width-md-25{width: 25%;}.width-md-50{width: 50%;}.width-md-75{width: 75%;}.width-md-100{width: 100%;}.width-md-unset{width: unset;}.width-md-auto{width: auto;}
+
+            /* height */
+            .height-md-0{width: 0%;}.height-md-25{width: 25%;}.height-md-50{width: 50%;}.height-md-75{width: 75%;}.height-md-100{width: 100%;}.height-md-unset{width: unset;}.height-md-auto{width: auto;}
+            }
+
+            /* LG */
+            @media (min-width: 992px){
+
+            .col-lg-1{width: 8.33%;}.col-lg-2{width: 16.66%;}.col-lg-3{width: 25%;}.col-lg-4{width: 33.33%;}.col-lg-5{width: 41.66%;}.col-lg-6{width: 50%;}.col-lg-7{width: 58.33%;}.col-lg-8{width: 66.66%;}.col-lg-9{width: 75%;}.col-lg-10{width: 83.33%;}.col-lg-11{width: 91.66%;}.col-lg-12{width: 100%;}
+            
+            /* lg-display */
+            .d-lg-block {display: block;}  .d-lg-none {display: none;}.d-lg-flex{display: flex;}.d-lg-flow-root{display: flow-root;}.d-lg-inline{display: inline;}.d-lg-in-block{display: inline-block;}.d-lg-in-flex{display: inline-flex;}.d-lg-in-table{display: inline-table;}.d-lg-list-item{display: list-item;}.d-lg-table{display: table;}.d-lg-table-caption{display: table-caption;}.d-lg-table-cell{display: table-cell;}.d-lg-table-col{display: table-column;}.d-lg-table-row{display: table-row;}
+
+            /* lg-position */
+            .p-lg-absolute{position: absolute;}.p-lg-fixed{position: fixed;}.p-lg-relative{position: relative;}.p-lg-static{position: static;}.p-lg-sticky{position: sticky;}.p-lg-unset{position: unset;}.p-lg-inherit{position: inherit;}.p-lg-initial{position: initial;}
+
+            /* lg-top */
+            .top-lg-5{top: 5%;}.top-lg-10{top: 10%;}.top-lg-15{top: 15%;}.top-lg-20{top: 20%;}.top-lg-25{top: 25%;}.top-lg-30{top: 30%;}.top-lg-35{top: 35%;}.top-lg-40{top: 40%;}.top-lg-45{top: 45%;}.top-lg-50{top: 50%;}.top-lg-55{top: 55%;}.top-lg-60{top: 60%;}.top-lg-65{top: 65%;}.top-lg-70{top: 70%;}.top-lg-75{top: 75%;}.top-lg-80{top: 80%;}.top-lg-85{top: 85%;}.top-lg-90{top: 90%;}.top-lg-95{top: 95%;}.top-lg-100{top: 100%;}
+
+            /* lg-bottom */
+            .bottom-lg-5{bottom: 5%;}.bottom-lg-10{bottom: 10%;}.bottom-lg-15{bottom: 15%;}.bottom-lg-20{bottom: 20%;}.bottom-lg-25{bottom: 25%;}.bottom-lg-30{bottom: 30%;}.bottom-lg-35{bottom: 35%;}.bottom-lg-40{bottom: 40%;}.bottom-lg-45{bottom: 45%;}.bottom-lg-50{bottom: 50%;}.bottom-lg-55{bottom: 55%;}.bottom-lg-60{bottom: 60%;}.bottom-lg-65{bottom: 65%;}.bottom-lg-70{bottom: 70%;}.bottom-lg-75{bottom: 75%;}.bottom-lg-80{bottom: 80%;}.bottom-lg-85{bottom: 85%;}.bottom-lg-90{bottom: 90%;}.bottom-lg-95{bottom: 95%;}.bottom-lg-100{bottom: 100%;}
+
+            /* lg-right */
+            .right-lg-5{right:5%;}.right-lg-10{right: 10%;}.right-lg-15{right: 15%;}.right-lg-20{right: 20%;}.right-lg-25{right: 25%;}.right-lg-30{right: 30%;}.right-lg-35{right: 35%;}.right-lg-40{right: 40%;}.right-lg-45{right: 45%;}.right-lg-50{right: 50%;}.right-lg-55{right: 55%;}.right-lg-60{right: 60%;}.right-lg-65{right: 65%;}.right-lg-70{right: 70%;}.right-lg-75{right: 75%;}.right-lg-80{right: 80%;}.right-lg-85{right: 85%;}.right-lg-90{right: 90%;}.right-lg-95{right: 95%;}.right-lg-100{right: 100%;}
+
+            /* lg-left */
+            .left-lg-5{left: 5%;}.left-lg-10{left: 10%;}.left-lg-15{left: 15%;}.left-lg-20{left: 20%;}.left-lg-25{left: 25%;}.left-lg-30{left: 30%;}.left-lg-35{left: 35%;}.left-lg-40{left: 40%;}.left-lg-45{left: 45%;}.left-lg-50{left: 50%;}.left-lg-55{left: 55%;}.left-lg-60{left: 60%;}.left-lg-65{left: 65%;}.left-lg-70{left: 70%;}.left-lg-75{left: 75%;}.left-lg-80{left: 80%;}.left-lg-85{left: 85%;}.left-lg-90{left: 90%;}.left-lg-95{left: 95%;}.left-lg-100{left: 100%;}
+
+            /* lg-padding */
+            .p-lg-1 {padding: 10px;}.p-lg-2 {padding: 20px;}.p-lg-3 {padding: 30px;}.p-lg-4 {padding: 40px;}.p-lg-5 {padding: 50px;}.pt-lg-1 {padding-top: 10px;}.pt-lg-2 {padding-top: 20px;}.pt-lg-3 {padding-top: 30px;}.pt-lg-4 {padding-top: 40px;}.pt-lg-5 {padding-top: 50px;}.pl-lg-1 {padding-left: 10px;}.pl-lg-2 {padding-left: 20px;}.pl-lg-3 {padding-left: 30px;}.pl-lg-4 {padding-left: 40px;}.pl-lg-5 {padding-left: 50px;}  .pr-lg-1 {padding-right: 10px;}.pr-lg-2 {padding-right: 20px;}.pr-lg-3 {padding-right: 30px;}.pr-lg-4 {padding-right: 40px;}.pr-lg-5 {padding-right: 50px;}.pb-lg-1 {padding-bottom: 10px;}.pb-lg-2 {padding-bottom: 20px;}.pb-lg-3 {padding-bottom: 30px;}.pb-lg-4 {padding-bottom: 40px;}.pb-lg-5 {padding-bottom: 50px;}
+
+            /* lg-margin */
+            .m-lg-1 {margin: 10px;}.m-lg-2 {margin: 20px;}.m-lg-3 {margin: 30px;}.m-lg-4 {margin: 40px;}.m-lg-5 {margin: 50px;}.mt-lg-1 {margin-top: 10px;}.mt-lg-2 {margin-top: 20px;}.mt-lg-3 {margin-top: 30px;}.mt-lg-4 {margin-top: 40px;}.mt-lg-5 {margin-top: 50px;}.ml-lg-1 {margin-left: 10px;}.ml-lg-2 {margin-left: 20px;}.ml-lg-3 {margin-left: 30px;}.ml-lg-4 {margin-left: 40px;}.ml-lg-5 {margin-left: 50px;}.mr-lg-1 {margin-right: 10px;}.mr-lg-2 {margin-right: 20px;}.mr-lg-3 {margin-right: 30px;}.mr-lg-4 {margin-right: 40px;}.mr-lg-5 {margin-right: 50px;}.mb-lg-1 {margin-bottom: 10px;}.mb-lg-2 {margin-bottom: 20px;}.mb-lg-3 {margin-bottom: 30px;}.mb-lg-4 {margin-bottom: 40px;}.mb-lg-5 {margin-bottom: 50px;}
+
+            /* lg-object-fit */
+            .obj-lg-contain{object-fit: contain;}.obj-lg-cover{object-fit: cover;}.obj-lg-fill{object-fit: fill;}.obj-lg-none{object-fit: none;}.obj-lg-scale-down{object-fit: scale-down;}.obj-lg-inherit{object-fit: inherit;}.obj-lg-initial{object-fit: initial;}.obj-lg-unset{object-fit: unset;}
+
+            /* lg-opacity */
+            .opacity-lg-10{opacity: 0.1;}.opacity-lg-20{opacity: 0.2;}.opacity-lg-30{opacity: 0.3;}.opacity-lg-40{opacity: 0.4;}.opacity-lg-50{opacity: 0.5;}.opacity-lg-60{opacity: 0.6;}.opacity-lg-70{opacity: 0.7;}.opacity-lg-80{opacity: 0.8;}.opacity-lg-90{opacity: 0.9;}.opacity-lg-100{opacity: 1;}
+
+            /* lg-overflow */
+            .overflow-lg-auto{overflow:auto;}.overflow-lg-hidden{overflow: hidden;}.overflow-lg-scroll{overflow: scroll;}.overflow-lg-visible{overflow: visible;}.overflow-lg-inherit{overflow: inherit;}.overflow-lg-initial{overflow: initial;}.overflow-lg-unset{overflow: unset;}
+
+            /* lg-vertical-align */
+            .vertical-lg-auto{vertical-align: auto;}.vertical-lg-top{vertical-align: top;}.vertical-lg-baseline{vertical-align: baseline;}.vertical-lg-baseline{vertical-align: baseline;}.vertical-lg-bottom{vertical-align: bottom;}.vertical-lg-middle{vertical-align: middle;}.vertical-lg-sub{vertical-align: sub;}.vertical-lg-super{vertical-align: super;}.vertical-lg-text-bottom{vertical-align: text-bottom;}.lg-vertical-align-text-top{vertical-align: text-top;}
+
+            /* text-align */
+            .text-lg-center {text-align: center;}.text-lg-left {text-align: left;}.text-lg-right {text-align: right;}.text-lg-justify {text-align: justify;}.text-lg-unset {text-align: unset;}
+
+            /* width */
+            .width-lg-0{width: 0%;}.width-lg-25{width: 25%;}.width-lg-50{width: 50%;}.width-lg-75{width: 75%;}.width-lg-100{width: 100%;}.width-lg-unset{width: unset;}.width-lg-auto{width: auto;}
+
+            /* height */
+            .height-lg-0{width: 0%;}.height-lg-25{width: 25%;}.height-lg-50{width: 50%;}.height-lg-75{width: 75%;}.height-lg-100{width: 100%;}.height-lg-unset{width: unset;}.height-lg-auto{width: auto;}
+            }
+
+            /* XL */
+            @media (min-width: 1200px){
+            
+            .col-xl-1{width: 8.33%;}.col-xl-2{width: 16.66%;}.col-xl-3{width: 25%;}.col-xl-4{width: 33.33%;}.col-xl-5{width: 41.66%;}.col-xl-6{width: 50%;}.col-xl-7{width: 58.33%;}.col-xl-8{width: 66.66%;}.col-xl-9{width: 75%;}.col-xl-10{width: 83.33%;}.col-xl-11{width: 91.66%;}.col-xl-12{width: 100%;}
+            
+            /* xl-display */
+            .d-xl-block {display: block;}  .d-xl-none {display: none;}.d-xl-flex{display: flex;}.d-xl-flow-root{display: flow-root;}.d-xl-inline{display: inline;}.d-xl-in-block{display: inline-block;}.d-xl-in-flex{display: inline-flex;}.d-xl-in-table{display: inline-table;}.d-xl-list-item{display: list-item;}.d-xl-table{display: table;}.d-xl-table-caption{display: table-caption;}.d-xl-table-cell{display: table-cell;}.d-xl-table-col{display: table-column;}.d-xl-table-row{display: table-row;}
+
+            /* xl-position */
+            .p-xl-absolute{position: absolute;}.p-xl-fixed{position: fixed;}.p-xl-relative{position: relative;}.p-xl-static{position: static;}.p-xl-sticky{position: sticky;}.p-xl-unset{position: unset;}.p-xl-inherit{position: inherit;}.p-xl-initial{position: initial;}
+            
+            /* xl-top */
+            .top-xl-5{top: 5%;}.top-xl-10{top: 10%;}.top-xl-15{top: 15%;}.top-xl-20{top: 20%;}.top-xl-25{top: 25%;}.top-xl-30{top: 30%;}.top-xl-35{top: 35%;}.top-xl-40{top: 40%;}.top-xl-45{top: 45%;}.top-xl-50{top: 50%;}.top-xl-55{top: 55%;}.top-xl-60{top: 60%;}.top-xl-65{top: 65%;}.top-xl-70{top: 70%;}.top-xl-75{top: 75%;}.top-xl-80{top: 80%;}.top-xl-85{top: 85%;}.top-xl-90{top: 90%;}.top-xl-95{top: 95%;}.top-xl-100{top: 100%;}
+            
+            /* xl-bottom */
+            .bottom-xl-5{bottom: 5%;}.bottom-xl-10{bottom: 10%;}.bottom-xl-15{bottom: 15%;}.bottom-xl-20{bottom: 20%;}.bottom-xl-25{bottom: 25%;}.bottom-xl-30{bottom: 30%;}.bottom-xl-35{bottom: 35%;}.bottom-xl-40{bottom: 40%;}.bottom-xl-45{bottom: 45%;}.bottom-xl-50{bottom: 50%;}.bottom-xl-55{bottom: 55%;}.bottom-xl-60{bottom: 60%;}.bottom-xl-65{bottom: 65%;}.bottom-xl-70{bottom: 70%;}.bottom-xl-75{bottom: 75%;}.bottom-xl-80{bottom: 80%;}.bottom-xl-85{bottom: 85%;}.bottom-xl-90{bottom: 90%;}.bottom-xl-95{bottom: 95%;}.bottom-xl-100{bottom: 100%;}
+
+            /* xl-left */
+            .left-xl-5{left: 5%;}.left-xl-10{left: 10%;}.left-xl-15{left: 15%;}.left-xl-20{left: 20%;}.left-xl-25{left: 25%;}.left-xl-30{left: 30%;}.left-xl-35{left: 35%;}.left-xl-40{left: 40%;}.left-xl-45{left: 45%;}.left-xl-50{left: 50%;}.left-xl-55{left: 55%;}.left-xl-60{left: 60%;}.left-xl-65{left: 65%;}.left-xl-70{left: 70%;}.left-xl-75{left: 75%;}.left-xl-80{left: 80%;}.left-xl-85{left: 85%;}.left-xl-90{left: 90%;}.left-xl-95{left: 95%;}.left-xl-100{left: 100%;}
+
+            /* xl-ight */
+            .right-xl-5{right:5%;}.right-xl-10{right: 10%;}.right-xl-15{right: 15%;}.right-xl-20{right: 20%;}.right-xl-25{right: 25%;}.right-xl-30{right: 30%;}.right-xl-35{right: 35%;}.right-xl-40{right: 40%;}.right-xl-45{right: 45%;}.right-xl-50{right: 50%;}.right-xl-55{right: 55%;}.right-xl-60{right: 60%;}.right-xl-65{right: 65%;}.right-xl-70{right: 70%;}.right-xl-75{right: 75%;}.right-xl-80{right: 80%;}.right-xl-85{right: 85%;}.right-xl-90{right: 90%;}.right-xl-95{right: 95%;}.right-xl-100{right: 100%;}
+
+            /* xl-padding */
+            .p-xl-1 {padding: 10px;}.p-xl-2 {padding: 20px;}.p-xl-3 {padding: 30px;}.p-xl-4 {padding: 40px;}.p-xl-5 {padding: 50px;}.pt-xl-1 {padding-top: 10px;}.pt-xl-2 {padding-top: 20px;}.pt-xl-3 {padding-top: 30px;}.pt-xl-4 {padding-top: 40px;}.pt-xl-5 {padding-top: 50px;}.pl-xl-1 {padding-left: 10px;}.pl-xl-2 {padding-left: 20px;}.pl-xl-3 {padding-left: 30px;}.pl-xl-4 {padding-left: 40px;}.pl-xl-5 {padding-left: 50px;}  .pr-xl-1 {padding-right: 10px;}.pr-xl-2 {padding-right: 20px;}.pr-xl-3 {padding-right: 30px;}.pr-xl-4 {padding-right: 40px;}.pr-xl-5 {padding-right: 50px;}.pb-xl-1 {padding-bottom: 10px;}.pb-xl-2 {padding-bottom: 20px;}.pb-xl-3 {padding-bottom: 30px;}.pb-xl-4 {padding-bottom: 40px;}.pb-xl-5 {padding-bottom: 50px;}
+
+            /* xl-margin */
+            .m-xl-1 {margin: 10px;}.m-xl-2 {margin: 20px;}.m-xl-3 {margin: 30px;}.m-xl-4 {margin: 40px;}.m-xl-5 {margin: 50px;}.mt-xl-1 {margin-top: 10px;}.mt-xl-2 {margin-top: 20px;}.mt-xl-3 {margin-top: 30px;}.mt-xl-4 {margin-top: 40px;}.mt-xl-5 {margin-top: 50px;}.ml-xl-1 {margin-left: 10px;}.ml-xl-2 {margin-left: 20px;}.ml-xl-3 {margin-left: 30px;}.ml-xl-4 {margin-left: 40px;}.ml-xl-5 {margin-left: 50px;}.mr-xl-1 {margin-right: 10px;}.mr-xl-2 {margin-right: 20px;}.mr-xl-3 {margin-right: 30px;}.mr-xl-4 {margin-right: 40px;}.mr-xl-5 {margin-right: 50px;}.mb-xl-1 {margin-bottom: 10px;}.mb-xl-2 {margin-bottom: 20px;}.mb-xl-3 {margin-bottom: 30px;}.mb-xl-4 {margin-bottom: 40px;}.mb-xl-5 {margin-bottom: 50px;}
+
+            /* xl-object-fit */
+            .obj-xl-contain{object-fit: contain;}.obj-xl-cover{object-fit: cover;}.obj-xl-fill{object-fit: fill;}.obj-xl-none{object-fit: none;}.obj-xl-scale-down{object-fit: scale-down;}.obj-xl-inherit{object-fit: inherit;}.obj-xl-initial{object-fit: initial;}.obj-xl-unset{object-fit: unset;}
+
+            /* xl-opacity */
+            .opacity-xl-10{opacity: 0.1;}.opacity-xl-20{opacity: 0.2;}.opacity-xl-30{opacity: 0.3;}.opacity-xl-40{opacity: 0.4;}.opacity-xl-50{opacity: 0.5;}.opacity-xl-60{opacity: 0.6;}.opacity-xl-70{opacity: 0.7;}.opacity-xl-80{opacity: 0.8;}.opacity-xl-90{opacity: 0.9;}.opacity-xl-100{opacity: 1;}
+
+            /* xl-overflow */
+            .overflow-xl-auto{overflow:auto;}.overflow-xl-hidden{overflow: hidden;}.overflow-xl-scroll{overflow: scroll;}.overflow-xl-visible{overflow: visible;}.overflow-xl-inherit{overflow: inherit;}.overflow-xl-initial{overflow: initial;}.overflow-xl-unset{overflow: unset;}
+
+            /* xl-vertical-align */
+            .vertical-xl-auto{vertical-align: auto;}.vertical-xl-top{vertical-align: top;}.vertical-xl-baseline{vertical-align: baseline;}.vertical-xl-bottom{vertical-align: bottom;}.vertical-xl-middle{vertical-align: middle;}.vertical-xl-sub{vertical-align: sub;}.vertical-xl-super{vertical-align: super;}.vertical-xl-text-bottom{vertical-align: text-bottom;}.vertical-xl-text-top{vertical-align: text-top;}
+
+            /* text-align */
+            .text-xl-center {text-align: center;}.text-xl-left {text-align: left;}.text-xl-right {text-align: right;}.text-xl-justify {text-align: justify;}.text-xl-unset {text-align: unset;}
+
+            /* width */
+            .width-xl-0{width: 0%;}.width-xl-25{width: 25%;}.width-xl-50{width: 50%;}.width-xl-75{width: 75%;}.width-xl-100{width: 100%;}.width-xl-unset{width: unset;}.width-xl-auto{width: auto;}
+
+            /* height */
+            .height-xl-0{width: 0%;}.height-xl-25{width: 25%;}.height-xl-50{width: 50%;}.height-xl-75{width: 75%;}.height-xl-100{width: 100%;}.height-xl-unset{width: unset;}.height-xl-auto{width: auto;}
+            }
+
+            /* XXL */
+            @media (min-width: 1400px){
+            
+            .col-xxl-1{width: 8.33%;}.col-xxl-2{width: 16.66%;}.col-xxl-3{width: 25%;}.col-xxl-4{width: 33.33%;}.col-xxl-5{width: 41.66%;}.col-xxl-6{width: 50%;}.col-xxl-7{width: 58.33%;}.col-xxl-8{width: 66.66%;}.col-xxl-9{width: 75%;}.col-xxl-10{width: 83.33%;}.col-xxl-11{width: 91.66%;}.col-xxl-12{width: 100%;}
+            
+            /* xxl-display */
+            .d-xxl-block {display: block;}.d-xxl-none {display: none;}.d-xxl-flex{display: flex;}.d-xxl-flow-root{display: flow-root;}.d-xxl-inline{display: inline;}.d-xxl-in-block{display: inline-block;}.d-xxl-in-flex{display: inline-flex;}.d-xxl-in-table{display: inline-table;}.d-xxl-list-item{display: list-item;}.d-xxl-table{display: table;}.d-xxl-table-caption{display: table-caption;}.d-xxl-table-cell{display: table-cell;}.d-xxl-table-col{display: table-column;}.d-xxl-table-row{display: table-row;}
+
+            /* xxl-position */
+            .p-xxl-absolute{position: absolute;}.p-xxl-fixed{position: fixed;}.p-xxl-relative{position: relative;}.p-xxl-static{position: static;}.p-xxl-sticky{position: sticky;}.p-xxl-unset{position: unset;}.p-xxl-inherit{position: inherit;}.p-xxl-initial{position: initial;}
+
+            /* xxl-top */
+            .top-xxl-5{top: 5%;}.top-xxl-10{top: 10%;}.top-xxl-15{top: 15%;}.top-xxl-20{top: 20%;}.top-xxl-25{top: 25%;}.top-xxl-30{top: 30%;}.top-xxl-35{top: 35%;}.top-xxl-40{top: 40%;}.top-xxl-45{top: 45%;}.top-xxl-50{top: 50%;}.top-xxl-55{top: 55%;}.top-xxl-60{top: 60%;}.top-xxl-65{top: 65%;}.top-xxl-70{top: 70%;}.top-xxl-75{top: 75%;}.top-xxl-80{top: 80%;}.top-xxl-85{top: 85%;}.top-xxl-90{top: 90%;}.top-xxl-95{top: 95%;}.top-xxl-100{top: 100%;}
+
+            /* xxl-bottom */
+            .bottom-xxl-5{bottom: 5%;}.bottom-xxl-10{bottom: 10%;}.bottom-xxl-15{bottom: 15%;}.bottom-xxl-20{bottom: 20%;}.bottom-xxl-25{bottom: 25%;}.bottom-xxl-30{bottom: 30%;}.bottom-xxl-35{bottom: 35%;}.bottom-xxl-40{bottom: 40%;}.bottom-xxl-45{bottom: 45%;}.bottom-xxl-50{bottom: 50%;}.bottom-xxl-55{bottom: 55%;}.bottom-xxl-60{bottom: 60%;}.bottom-xxl-65{bottom: 65%;}.bottom-xxl-70{bottom: 70%;}.bottom-xxl-75{bottom: 75%;}.bottom-xxl-80{bottom: 80%;}.bottom-xxl-85{bottom: 85%;}.bottom-xxl-90{bottom: 90%;}.bottom-xxl-95{bottom: 95%;}.bottom-xxl-100{bottom: 100%;}
+
+            /* xxl-left */
+            .left-xxl-5{left: 5%;}.left-xxl-10{left: 10%;}.left-xxl-15{left: 15%;}.left-xxl-20{left: 20%;}.left-xxl-25{left: 25%;}.left-xxl-30{left: 30%;}.left-xxl-35{left: 35%;}.left-xxl-40{left: 40%;}.left-xxl-45{left: 45%;}.left-xxl-50{left: 50%;}.left-xxl-55{left: 55%;}.left-xxl-60{left: 60%;}.left-xxl-65{left: 65%;}.left-xxl-70{left: 70%;}.left-xxl-75{left: 75%;}.left-xxl-80{left: 80%;}.left-xxl-85{left: 85%;}.left-xxl-90{left: 90%;}.left-xxl-95{left: 95%;}.left-xxl-100{left: 100%;}
+
+            /* xxl-right */
+            .right-xxl-5{right:5%;}.right-xxl-10{right: 10%;}.right-xxl-15{right: 15%;}.right-xxl-20{right: 20%;}.right-xxl-25{right: 25%;}.right-xxl-30{right: 30%;}.right-xxl-35{right: 35%;}.right-xxl-40{right: 40%;}.right-xxl-45{right: 45%;}.right-xxl-50{right: 50%;}.right-xxl-55{right: 55%;}.right-xxl-60{right: 60%;}.right-xxl-65{right: 65%;}.right-xxl-70{right: 70%;}.right-xxl-75{right: 75%;}.right-xxl-80{right: 80%;}.right-xxl-85{right: 85%;}.right-xxl-90{right: 90%;}.right-xxl-95{right: 95%;}.right-xxl-100{right: 100%;}
+
+            /* xxl-padding */
+            .p-xxl-1 {padding: 10px;}.p-xxl-2 {padding: 20px;}.p-xxl-3 {padding: 30px;}.p-xxl-4 {padding: 40px;}.p-xxl-5 {padding: 50px;}.pt-xxl-1 {padding-top: 10px;}.pt-xxl-2 {padding-top: 20px;}.pt-xxl-3 {padding-top: 30px;}.pt-xxl-4 {padding-top: 40px;}.pt-xxl-5 {padding-top: 50px;}.pl-xxl-1 {padding-left: 10px;}.pl-xxl-2 {padding-left: 20px;}.pl-xxl-3 {padding-left: 30px;}.pl-xxl-4 {padding-left: 40px;}.pl-xxl-5 {padding-left: 50px;}  .pr-xxl-1 {padding-right: 10px;}.pr-xxl-2 {padding-right: 20px;}.pr-xxl-3 {padding-right: 30px;}.pr-xxl-4 {padding-right: 40px;}.pr-xxl-5 {padding-right: 50px;}.pb-xxl-1 {padding-bottom: 10px;}.pb-xxl-2 {padding-bottom: 20px;}.pb-xxl-3 {padding-bottom: 30px;}.pb-xxl-4 {padding-bottom: 40px;}.pb-xxl-5 {padding-bottom: 50px;}
+
+            /* xxl-margin */
+            .m-xxl-1 {margin: 10px;}.m-xxl-2 {margin: 20px;}.m-xxl-3 {margin: 30px;}.m-xxl-4 {margin: 40px;}.m-xxl-5 {margin: 50px;}.mt-xxl-1 {margin-top: 10px;}.mt-xxl-2 {margin-top: 20px;}.mt-xxl-3 {margin-top: 30px;}.mt-xxl-4 {margin-top: 40px;}.mt-xxl-5 {margin-top: 50px;}.ml-xxl-1 {margin-left: 10px;}.ml-xxl-2 {margin-left: 20px;}.ml-xxl-3 {margin-left: 30px;}.ml-xxl-4 {margin-left: 40px;}.ml-xxl-5 {margin-left: 50px;}.mr-xxl-1 {margin-right: 10px;}.mr-xxl-2 {margin-right: 20px;}.mr-xxl-3 {margin-right: 30px;}.mr-xxl-4 {margin-right: 40px;}.mr-xxl-5 {margin-right: 50px;}.mb-xxl-1 {margin-bottom: 10px;}.mb-xxl-2 {margin-bottom: 20px;}.mb-xxl-3 {margin-bottom: 30px;}.mb-xxl-4 {margin-bottom: 40px;}.mb-xxl-5 {margin-bottom: 50px;}
+
+            /* xxl-object-fit */
+            .obj-xxl-contain{object-fit: contain;}.obj-xxl-cover{object-fit: cover;}.obj-xxl-fill{object-fit: fill;}.obj-xxl-none{object-fit: none;}.obj-xxl-scale-down{object-fit: scale-down;}.obj-xxl-inherit{object-fit: inherit;}.obj-xxl-initial{object-fit: initial;}.obj-xxl-unset{object-fit: unset;}
+
+            /* xxl-opacity */
+            s.opacity-xxl-10{opacity: 0.1;}.opacity-xxl-20{opacity: 0.2;}.opacity-xxl-30{opacity: 0.3;}.opacity-xxl-40{opacity: 0.4;}.opacity-xxl-50{opacity: 0.5;}.opacity-xxl-60{opacity: 0.6;}.opacity-xxl-70{opacity: 0.7;}.opacity-xxl-80{opacity: 0.8;}.opacity-xxl-90{opacity: 0.9;}.opacity-xxl-100{opacity: 1;}
+
+            /* xxl-overflow */
+            .overflow-xxl-auto{overflow:auto;}.overflow-xxl-hidden{overflow: hidden;}.overflow-xxl-scroll{overflow: scroll;}.overflow-xxl-visible{overflow: visible;}.overflow-xxl-inherit{overflow: inherit;}.overflow-xxl-initial{overflow: initial;}.overflow-xxl-unset{overflow: unset;}
+
+            /* xxl-vertical-align */
+            .vertical-xxl-auto{vertical-align: auto;}.vertical-xxl-top{vertical-align: top;}.vertical-xxl-baseline{vertical-align: baseline;}.vertical-xxl-bottom{vertical-align: bottom;}.vertical-xxl-middle{vertical-align: middle;}.vertical-xxl-sub{vertical-align: sub;}.vertical-xxl-super{vertical-align: super;}.vertical-xxl-text-bottom{vertical-align: text-bottom;}.vertical-xxl-text-top{vertical-align: text-top;}
+
+            /* txet-align */
+            .text-xxl-center {text-align: center;}.text-xxl-left {text-align: left;}.text-xxl-right {text-align: right;}.text-xxl-justify {text-align: justify;}.text-xxl-unset {text-align: unset;}
+
+            /* width */
+            .width-xxl-0{width: 0%;}.width-xxl-25{width: 25%;}.width-xxl-50{width: 50%;}.width-xxl-75{width: 75%;}.width-xxl-100{width: 100%;}.width-xxl-unset{width: unset;}.width-xxl-auto{width: auto;}
+
+            /*  */
+            .width-xxl-0{width: 0%;}.width-xxl-25{width: 25%;}.width-xxl-50{width: 50%;}.width-xxl-75{width: 75%;}.width-xxl-100{width: 100%;}.width-xxl-unset{width: unset;}.width-xxl-auto{width: auto;}
+            }
+            .py-15{
+                padding-top: 15px;
+                padding-bottom: 15px;
+            }
+            /* header css */
+            .header{
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                z-index: 998;
+                color: #fff;
+                padding: 10px 0;
+            }
+            .logo ,.navbar li {
+                line-height: 48px;
+                font-size: 18px;
+                padding-left: 15px;
+                padding-right: 15px;
+                transition: 0.5s all ease;
+            }
+
+            @media (max-width:768px){
+            
+            }
+
+            .navbar{
+                text-align: right;
+                transition: 0.3s all ease;
+                width: 100%;
+            }
+            .drop .down{
+                position: absolute;
+                left: 0%;
+                right: 0;
+                top: 100%;
+                width: max-content;
+                background-color: #fff;
+                transition: 0.3s all;
+            }
+            .drop:hover .down{
+                display: block;
+            }
+            .drop .down li{
+                display: block;
+            }
+            .navbar ul li:hover{
+                background-color: #cbeeff;
+                color: #000;
+            }
+            .drop .down li a{
+                padding: 0 30px;
+                color: #2E5F86;
+            }
+            #menutoggle{
+                display: none;
+            }
+            @media (max-width:768px){
+                .navbar li a{
+                    padding-left: 8px;
+                    padding-right: 8px;
+                }
+                .header .logo{
+                    font-size: 28px;
+                }
+                .header{
+                    display: block;
+                    height: auto;
+                }
+                .navbar{
+                display: none;
+                width: 100%;
+                background-color: #777777;
+                color: #F4F9FC;
+                }
+
+                input[type="checkbox"]{
+                    display: none;
+                }
+                :checked + .navbar-row .navbar{
+                    display: block;
+                }
+                .navbar li {
+                    display: block;
+                    width: 100%;
+                    text-align: center;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                }
+                
+                #menutoggle:checked~ul{
+                    max-height: 350px;
+                }
+                .menu-icon i{
+                    font-size: 1.7em;
+                }
+                .drop .down{
+                    position: absolute;
+                    top: 100%;
+                    left: 50%;
+                    right: 0;
+                    transform: translateX(-50%);
+                }
+            }
+
+
+            /* home-desc css */
+            .home-desc{
+                color: #fff;
+            }
+            .home-desc::before {
+                content: "";
+                background: linear-gradient(rgba(55, 142, 181, 0.6), rgba(55, 142, 181, 0.2)),url('https://bootstrapmade.com/demo/templates/Squadfree/assets/img/hero-bg.jpg') no-repeat fixed center / cover;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+            }
+            .home-desc h1{
+                font-size: 58px;
+            }
+            .home-desc p{
+                font-size: 22px;
+            }
+            .center_box {
+                width: 100%;
+                height: 100vh;
+            }
+            .home-desc-tag{
+                text-align: center;
+            }
+            /* home-desc Responsive */
+            @media (max-width: 768px) {
+                .home-desc h1{
+                    font-size: 45px;
+                }
+            }
+            @media (max-width:425px){
+                .home-desc h1{
+                    font-size: 31px;
+                }
+                .home-desc p{
+                    font-size: 20px;
+                }
+            }
+
+
+            /* about CSS */
+            .about{
+                padding: 80px 10px;
+                background-image: url('https://bootstrapmade.com/demo/templates/Squadfree/assets/img/about-bg.jpg');
+            }
+            .about::before{
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: #fff;
+                opacity: 0.75;
+            }
+            .about .content{
+                padding: 30px 30px 30px 0;
+            }
+            .content h3{
+                padding-bottom: 30px;
+                font-size: 30px;
+                color: #324D5A;
+            }
+            .content p{
+                font-size: 19px;
+                padding-bottom: 20px;
+                color: #5F5F5F;
+            }
+            .content a{
+                line-height: 35px;
+                margin-top: 10px;
+                background-color: #70B0D1;
+                border-radius: 15px;
+                display: inline-block;
+                padding: 0 30px;
+                color: #fff;
+                font-size: 16px;
+
+            }
+            .icon-box{
+                padding: 25px;
+                border-radius: 15px;
+                transition: 0.3s all;
+            }
+            .icon-box svg{
+                height: 40px;
+                fill: #70B0D1;
+            }
+            .icon-box h4{
+                font-size: 21px;
+                padding: 10px 0;
+            }
+            .icon-box p{
+                font-size: 19px;
+                padding-bottom: 10px;
+                color: #5F5F5F;
+            }
+
+            @media (max-width:768px){
+                .about{
+                    padding: 60px 10px;
+                }
+            }
+            @media (max-width:425px){
+                .about .content{
+                    padding: 0;
+                }
+                .content h3{
+                    padding-bottom: 15px;
+                    font-size: 26px;
+                }
+                .content p{
+                    font-size: 17px;
+                    padding-bottom: 10px;
+                }
+                .icon-box{
+                    padding: 0;
+                }
+            }
+
+            /* service */
+            .service{
+                padding-top: 80px;
+                padding-bottom: 80px;
+                background-color: #F7F7F9;
+            }
+                /* section-title */
+
+                .section-title{
+                    padding-bottom: 35px;
+                }
+                .section-title h2{
+                    text-align: center;
+                    margin-bottom: 30px;
+                    font-size: 32px;
+                    color: #2f4d5a;
+                }
+                .section-title h2::before{
+                    content: "";
+                    position: absolute;
+                    left: 50%;
+                    right: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 122px;
+                    height: 66px;
+                    background: url('https://bootstrapmade.com/demo/templates/Squadfree/assets/img/section-title-bg.png');
+                }
+                .section-title p{
+                    font-size: 17px;
+                    text-align: center;
+                    color: #5F5F5F;
+                }
+                .service .icon-box >*{
+                    position: relative;
+                }
+                
+            .service .icon-box{
+                margin-top: 30px;
+                padding: 25px;
+                border-radius: 15px;
+                transition: 0.3s all;
+                border: 1px solid #F5F5F5;
+                background-color: #fff;
+            }
+            .service .icon-box::before{
+                content: "";
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                left: 0;
+                height: 0;
+                border-radius: 15px;
+                width: 100%;
+                background-color: #5c9cc7;
+                transition: 0.2s all ease;
+            }
+            .service .icon-box:hover:before{
+                height: 100%;
+            }
+            .service .icon-box:hover svg{
+                fill: white;
+            }
+            .service .icon-box:hover p{
+                color: #fff;
+            }
+            .icon-box .icon svg{
+                height: 48px;
+                width: 48px;
+                fill: #77B0D1;
+                margin-bottom: 15px;
+            }
+            .icon-box .descprition p{
+                color: #5F5F5F;
+                line-height: 25px;
+            } 
+            .service .icon-box:hover h4{
+                color: #fff;
+            }
+
+            @media (max-width:425px){
+                .section-title{
+                    padding-bottom: 15px;
+                }
+                .service .icon-box{
+                    margin-top: 0;
+                    background-color: inherit;
+                    border: none;
+                    padding: 15px 10px;
+                }
+                .icon-box .icon svg{
+                    margin-bottom: 0;
+                }
+            }
+
+            /* count */
+            .counts{
+                padding-top: 60px;
+                padding-bottom: 30px;
+                background-color: #F4F9FC;
+            }
+            .count-box{
+                padding: 10px;
+            }
+            .counts svg{
+                width: 45px;
+                height: 45px;
+                display: inline-block;
+                margin: -7px 0;
+                fill: #70B0D1;
+            }
+            .counts span{
+                font-size: 48px;
+                line-height: 40px;
+                display: inline-block;
+                margin-left: 10px;
+                font-weight: 700;
+                color: #324D5A;
+            }
+            .counts p{
+                margin-left: 60px;
+            }
+            strong{
+                display: block;
+                color: #537E9A;
+
+            }
+
+            @media (max-width:768px){
+                .count-box{
+                    padding: 20px;
+                }
+            }
+            @media(max-width:425px){
+                .counts svg{
+                    height: 35px;
+                    width: 35px;
+                }
+                .counts span{
+                    font-size: 38px;
+                }
+                .counts p{
+                    font-size: 18px;
+                    margin-left: 49px;
+                }
+                .counts .count-box strong{
+                    padding-right: 6px;
+                }
+                .counts span{
+                    padding-bottom: 6px;
+                }
+            }
+
+            /* cta-section */
+            .cta-section{
+                padding-top: 50px;
+                padding-bottom: 30px;
+                text-align: center;
+                color: #fff;
+            }
+            .cta-section::before{
+                content: "";
+                background: linear-gradient(rgba(103, 176, 209, 0.8), rgba(103, 176, 209, 0.8)),url('https://bootstrapmade.com/demo/templates/Squadfree/assets/img/cta-bg.jpg') no-repeat fixed center/cover;
+                position: absolute;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                z-index: -1;
+            }
+            .cta-section h3{
+                padding-bottom: 10px;
+                font-size: 28px;
+            }
+            .cta-section p{
+                font-size: 17px;
+                padding: 10px 25px;
+            }
+            .cta-section a{
+                display: inline-block;
+                padding: 8px 28px;
+                border-radius: 25px;
+                font-size: 18px;
+                letter-spacing: 1px;
+                border: 1px solid #fff;
+                margin-top: 10px;
+                text-transform: uppercase;
+            }
+
+            /* portfolio */
+            .portfolio{
+                padding-top: 60px;
+                padding-bottom: 30px;
+                text-align: center;
+            }
+            .portfolio .img-list{
+                background-color: #EDF5F9;
+                border-radius: 25px;
+                display:inline-block;
+                margin: 0 auto 25px auto;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+            .portfolio .img-list li{
+                padding: 10px 15px 8px;
+                margin-bottom: 5px;
+                line-height: 25px;
+                font-size: 14px;
+                font-weight: 700px;
+            }
+            .portfolio .img-list li:first-child{
+                color: #537E9A;
+            }
+
+            .portfolio .box{
+                position: relative;
+                overflow: hidden;
+            }
+            .portfolio .box:hover img{
+                opacity: 0.8;
+            }
+            .portfolio .box:hover .desc-box{
+                transform: translateY(0);
+            }
+            .desc-box{
+                left: 0;
+                right: 0;
+                bottom: 0;
+                transform: translateY(100%);
+                transition: 0.3s all;
+                padding: 5px 0;
+            }
+            .hover-box{
+                background-color: #91C1DB;
+                width: 100%;
+            }
+            .hover-box a{
+                width: 100%;
+            }
+            .hover-box li{
+                display: block;
+                line-height: 30px;
+                transition: 0.3s all;
+            }
+            .hover-box li:hover{
+                background-color: #76B3D2;
+            }
+            .hover-box svg{
+                width: 21px;
+                height: 21px;
+                margin: -6px 0;
+                fill: #fff;
+            }
+
+            @media(max-width:768px){
+                .portfolio .img-box{
+                    margin: 0 auto 10px auto;
+                }
+            }
+
+
+            /* testimonial */
+            .testimonial{
+                padding-top: 50px;
+                padding-bottom: 40px;
+                background-color: #F4F9FC;
+            }
+            .testimonial-item p{
+                padding: 20px;
+                margin: 0 15px 15px 15px;
+                background-color: #fff;
+                border-radius: 7px;
+                text-align: center;
+            }
+            .testimonial-item svg{
+                width: 20px;
+                margin: 0 5px;
+                fill: #D7E9F2;
+            }
+            .testimonial-item .second{
+                transform: rotate(180deg);
+                margin-bottom: -5px;
+            }
+            .testimonial-item img{
+                width: 90px;
+                margin: 0 auto;
+                border-radius: 50%;
+            }
+            .testimonial-item h3{
+                text-align: center;
+                padding-top: 5px;
+            }
+            .testimonial-item h4{
+                text-align: center;
+            }
+            .testimonial-box{
+                width: 100%;
+            }
+            .slick-prev {
+                left: 25px;
+            }
+            .slick-next {
+                right: 25px;
+            }
+
+            .slick-prev, .slick-next {
+                z-index: 9;
+            }
+
+
+            /* team-section */
+            .team{
+                padding-top: 60px;
+                padding-bottom: 100px;
+                text-align: center;
+            }
+            .member{
+                margin-bottom: 100px;
+            }
+            .team .member h4{
+                padding-bottom: 10px;
+                margin-bottom: 10px;
+            }
+            .team .member h4::after{
+                content: "";
+                position: absolute;
+                display: block;
+                width: 50px;
+                height: 1px;
+                text-align: center;
+                background-color: #b1cbd7;
+                bottom: 0;
+                left: calc(50% - 25px);
+            }
+            .team .member .member-info{
+                top: 85%;
+                left: 25px;
+                right: 25px;
+                background-color: #fff;
+                padding: 20px 0 ;
+                color: #2f4d5a;
+                overflow: hidden;
+                transition: 0.5s all;
+                box-shadow: 0 2px 15px rgba(0,0,0,10%);
+            }
+            .social{
+                display: none;
+                transition: 0.5s all;
+                padding-top: 10px;
+            }
+            .social a{
+                display: inline-block;
+                font-size: 24px;
+                color: #6095AF;
+                padding: 0 5px;
+            }
+            .member:hover .social{
+                display: block;
+            }
+
+            /* contact */
+            .contact{
+                padding-top: 50px;
+                padding-bottom: 80px;
+                background-color: #F4F9FC;
+            }
+            .contact .col-box{
+                background-color: #fff;
+                padding-top: 20px;
+                padding-bottom: 30px;
+                text-align: center;
+                margin: 0;
+            }
+            .contact .col svg{
+                width: 32px;
+                height: 32px;
+                fill: #70B0D1;
+            }
+            .contact .col i{
+                font-size: 32px;
+                color: #70B0D1;
+            }
+            .contact .col h3,.contact .col p{
+                padding: 5px 0;
+                color: #777777;
+            }
+            .row .input-box{
+                background-color: #fff;
+            }
+            .contact form{
+                background-color: #fff;
+                padding: 20px;
+                text-align: center;
+            }
+            .add-col{
+                margin: 0;
+            }
+            .first-col{
+                margin-top: 15px;
+                margin-bottom: 15px;
+            }
+            .contact form .input-box input{
+                width: 100%;
+                padding: 10px;
+                border:1px solid #CFD4DA;
+            }
+            .sub-in{
+                padding-top: 15px;
+                padding-bottom: 15px;
+            }
+            .sub-in input{
+                width: 100%;
+                padding: 10px;
+                border: 1px solid #CFD4DA;
+            }
+            .massge-in textarea{
+                width: 100%;
+                padding: 10px;
+                border:1px solid #CFD4DA;
+            }
+            .send-btn{
+                background-color: #70B0D1;
+                padding-left: 20px;
+                padding-right: 20px;
+                display: inline-block;
+                margin-top: 10px;
+            }
+            .send-btn a{
+                line-height: 35px;
+                font-size: 18px;
+                color: #fff;
+            }
+
+            @media (max-width:575px){
+                .contact .col-box{
+                    padding-bottom: 15px;
+                    margin-bottom: 15px;
+                }
+            }
+
+            /* footer */
+            footer{
+                background-color: #293F49;
+                padding-top: 40px;
+                padding-bottom: 50px;
+                color: #fff;
+            }
+            .footer-top{
+                padding-bottom: 30px;
+            }
+            footer .footer-info{
+                background-color: #fff;
+                color: #2f4d5a;
+                margin-top: -90px;
+                padding: 15px;
+                text-align: center;
+                padding: 30px 20px;
+                border-top: 4px solid #67b0d1;
+            }
+            footer .footer-info .para{
+                font-size: 15px;
+                font-style: italic;
+                padding: 10px 0;
+            }
+            .social-one a{
+                display: inline-block;
+                padding: 10px 5px 0;
+                font-size: 22px;
+            }
+            footer .footer-top h4{
+                font-size: 16px;
+                font-weight: 600;
+                padding-bottom: 12px;
+                margin-bottom: 5px;
+            }
+            footer ul li{
+                display: block;
+                padding: 10px 0;
+                width: max-content;
+            }
+            footer ul li a{
+                display: inline-block;
+            }
+            .footer-top form {
+                margin-top: 30px;
+                background: #fff;
+                padding: 7px 10px;
+            }
+            .footer-top form input[type=email]{
+                border: 0;
+                width: calc(100% - 110px);
+            }
+            .footer-top form input[type=submit]{
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                border: 0;
+                background-color: #70B0D1;
+                padding: 0 20px;
+                font-size: 16px;
+                color: #fff;
+            }
+            .copyright{
+                border-top: 1px solid #385b6b;
+                text-align: center;
+                padding-top: 30px;
+            }
+            .copyright strong{
+                display: inline-block;
+                color: #fff;
+            }
+            footer .credits {
+                padding-top: 10px;
+                text-align: center;
+                font-size: 13px;
+                color: #fff;
+            }
+            footer .credits a{
+                display: inline-block;
+                color: #94ABB2;
+            }
+    </style>
+
+</head>
+<body>
+    <div class="main">
+
+        <!-- header -->
+        <div class="header">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-6 col-md-2 d-in-block text-center">
+                        <div class="logo">
+                            <a href="#">
+                            <span>SQUADFREE</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col col-6  pt-1 text-right d-md-none">
+                        <label for="menutoggle" class="menu-icon d-in-block"><i class="fa fa-bars" aria-hidden="true"></i></label>
+                    </div>
+                    <div class="col col-12 col-md-10">
+                        <input type="checkbox" id="menutoggle" />
+                        <div class="navbar-row">
+                            <div class="row">
+                                <div class="col col-12">
+                                    <ul class="navbar">
+                                        <li><a href="#" target="_blank" >Home</a></li>
+                                        <li><a href="#" target="_blank">About Us</a></li>
+                                        <li><a href="#" target="_blank">Services</a></li>
+                                        <li><a href="#" target="_blank">Portfolio</a></li>
+                                        <li><a href="#" target="_blank">Team</a></li>
+                                        <li class="drop p-relative"><a href="#" target="_blank">Dorp Down</a>
+                                            <ul class="down d-none">
+                                                <li><a href="#" target="_blank">Drop Dowm 1</a></li>
+                                                <li><a href="#" target="_blank">Drop Dowm 2</a></li>
+                                                <li><a href="#" target="_blank">Drop Dowm 3</a></li>
+                                                <li><a href="#" target="_blank">Drop Dowm 4</a></li>
+                                                <li><a href="#" target="_blank">Drop Dowm 5</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#" target="_blank">Contact</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- home-desc -->
+        <div class="home-desc p-relative overflow-hidden">
+            <div class="d-table center_box">
+                <div class="d-table-cell vertical-align-middle">
+                    <div class="container p-relative">
+                        <div class="row">
+                            <div class="col col-12">
+                                <div class="home-desc-tag">
+                                    <h1>WELCOME TO SQUAD</h1>
+                                    <P>WE ARE TEAM OF TALENTED DESIGNER MAKING WEBSITE WITH BOOTSTRAP</P>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- about  -->
+        <div class="about p-relative text-center text-md-left">
+            <div class="container p-relative">
+                <div class="row">
+                    <div class="col col-12 col-lg-5">
+                        <div class="content">
+                            <h3>Voluptatem dignissimos provident quasi</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa officia magnam saepe ratione facere quidem. Quas, voluptatibus, eveniet repellat nisi </p>
+                            <a href="#" target="_blank" class="about-btn">
+                                About us
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col col-12 col-lg-7">
+                        <div class="row">
+                            <div class="col col-12 col-md-6">
+                                <div class="icon-box">
+                                    <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24"><path d="M21 11h-3V4a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v14c0 1.654 1.346 3 3 3h14c1.654 0 3-1.346 3-3v-6a1 1 0 0 0-1-1zM5 19a1 1 0 0 1-1-1V5h12v13c0 .351.061.688.171 1H5zm15-1a1 1 0 0 1-2 0v-5h2v5z"/><path d="M6 7h8v2H6zm0 4h8v2H6zm5 4h3v2h-3z"/></svg>
+                                    <h4>Corporis voluptates sit</h4>
+                                    <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquips</p>
+                                </div>
+                            </div>
+                            <div class="col col-12 col-md-6">
+                                <div class="icon-box">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17.895 3.553A1.001 1.001 0 0 0 17 3H7c-.379 0-.725.214-.895.553l-4 8a1 1 0 0 0 0 .895l4 8c.17.338.516.552.895.552h10c.379 0 .725-.214.895-.553l4-8a1 1 0 0 0 0-.895l-4-7.999zM19.382 11h-7.764l-3-6h7.764l3 6zM4.118 12 7 6.236 9.882 12 7 17.764 4.118 12zm12.264 7H8.618l3-6h7.764l-3 6z"/></svg>
+                                    <h4>Ullamco laboris nisi</h4>
+                                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col col-12 col-md-6">
+                                <div class="icon-box">
+                                    <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24"><path d="M21 11h-3V4a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v14c0 1.654 1.346 3 3 3h14c1.654 0 3-1.346 3-3v-6a1 1 0 0 0-1-1zM5 19a1 1 0 0 1-1-1V5h12v13c0 .351.061.688.171 1H5zm15-1a1 1 0 0 1-2 0v-5h2v5z"/><path d="M6 7h8v2H6zm0 4h8v2H6zm5 4h3v2h-3z"/></svg>
+                                    <h4>Corporis voluptates sit</h4>
+                                    <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquips</p>
+                                </div>
+                            </div>
+                            <div class="col col-12 col-md-6">
+                                <div class="icon-box">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17.895 3.553A1.001 1.001 0 0 0 17 3H7c-.379 0-.725.214-.895.553l-4 8a1 1 0 0 0 0 .895l4 8c.17.338.516.552.895.552h10c.379 0 .725-.214.895-.553l4-8a1 1 0 0 0 0-.895l-4-7.999zM19.382 11h-7.764l-3-6h7.764l3 6zM4.118 12 7 6.236 9.882 12 7 17.764 4.118 12zm12.264 7H8.618l3-6h7.764l-3 6z"/></svg>
+                                    <h4>Ullamco laboris nisi</h4>
+                                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- services -->
+        <div class="service">
+            <div class="container">
+                <div class="section-title">
+                    <h2 class="p-relative">
+                       <span class="p-relative"> Services
+                    </span>
+                       </h2>
+                    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+                </div>
+                <div class="row">
+                    <div class="col col-12 col-md-6 col-lg-3">
+                        <div class="box p-relative">
+                            <div class="icon-box">
+                                <div class="icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                                        <path d="M16 32c-8.817 0-16-7.183-16-16s7.183-16 16-16c8.817 0 16 7.183 16 16s-7.183 16-16 16zM29.495 18.188c-0.468-0.147-4.229-1.271-8.516-0.584 1.787 4.912 2.516 8.912 2.657 9.745 3.067-2.073 5.249-5.36 5.859-9.161zM21.339 28.599c-0.203-1.197-1-5.375-2.917-10.359l-0.088 0.025c-7.719 2.688-10.479 8.037-10.719 8.537 2.303 1.807 5.224 2.885 8.385 2.885 1.891 0 3.693-0.385 5.333-1.084zM5.849 25.161c0.307-0.536 4.057-6.74 11.109-9.021 0.177-0.061 0.359-0.113 0.536-0.161-0.344-0.781-0.719-1.557-1.109-2.317-6.823 2.036-13.443 1.953-14.041 1.937l-0.005 0.417c0 3.511 1.328 6.719 3.511 9.14zM2.62 13.219c0.615 0.011 6.244 0.036 12.635-1.661-2.265-4.027-4.708-7.412-5.067-7.907-3.824 1.803-6.677 5.323-7.568 9.563zM12.803 2.735c0.375 0.511 2.859 3.885 5.093 8 4.859-1.817 6.921-4.584 7.167-4.932-2.417-2.152-5.589-3.448-9.063-3.448-1.099 0-2.172 0.129-3.197 0.38zM26.579 7.38c-0.287 0.385-2.579 3.323-7.631 5.385 0.317 0.656 0.625 1.313 0.907 1.984 0.109 0.24 0.197 0.48 0.291 0.704 4.548-0.573 9.068 0.349 9.521 0.443-0.027-3.229-1.172-6.188-3.079-8.511z"/>
+                                    </svg>
+                                </div>
+                                <h4 >Lorem Ipsum</h4>
+                                <div class="descprition">
+                                    <p>
+                                        Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-12 col-md-6 col-lg-3">
+                        <div class="box p-relative">
+                            <div class="icon-box">
+                                <div class="icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><g><path d="M343.215,0H62.061v512h387.879V106.724L343.215,0z M403.394,465.455H108.606V46.545h201.697v93.091h93.091V465.455z"/></g><g><rect x="162.909" y="186.182" width="186.182" height="46.545"/></g><g><rect x="162.909" y="279.273" width="186.182" height="46.545"/></g><g><rect x="162.909" y="372.364" width="139.636" height="46.545"/></g>s</svg>
+                                </div>
+                                <h4>Sed ut perspiciatis</h4>
+                                <div class="descprition">
+                                    <p>
+                                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-12 col-md-6 col-lg-3">
+                        <div class="box p-relative">
+                            <div class="icon-box">
+                                <div class="icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24"><path d="M12 4C6.486 4 2 8.486 2 14a9.89 9.89 0 0 0 1.051 4.445c.17.34.516.555.895.555h16.107c.379 0 .726-.215.896-.555A9.89 9.89 0 0 0 22 14c0-5.514-4.486-10-10-10zm7.41 13H4.59A7.875 7.875 0 0 1 4 14c0-4.411 3.589-8 8-8s8 3.589 8 8a7.875 7.875 0 0 1-.59 3z"/><path d="M10.939 12.939a1.53 1.53 0 0 0 0 2.561 1.53 1.53 0 0 0 2.121-.44l3.962-6.038a.034.034 0 0 0 0-.035.033.033 0 0 0-.045-.01l-6.038 3.962z"/></svg>
+                                </div>
+                                <h4>Magni Dolores</h4>
+                                <div class="descprition">
+                                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-12 col-md-6 col-lg-3">
+                        <div class="box p-relative">
+                            <div class="icon-box">
+                                <div class="icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="52px" height="52px" viewBox="0 0 52 52" enable-background="new 0 0 52 52" xml:space="preserve">
+                                        <path d="M26,2C12.7,2,2,12.7,2,26s10.7,24,24,24s24-10.7,24-24S39.3,2,26,2z M26,7C26,7,26,7,26,7C26,7,26,7,26,7  C26,7,26,7,26,7z M28,7.1c-0.1,0-0.1,0-0.2,0C27.9,7.1,28,7.1,28,7.1z M26,45C15.5,45,7,36.5,7,26c0-1,0.1-2.1,0.3-3  c1.3,0.2,2.9,0.7,3.7,1.5c1.7,1.8,3.6,3.9,5.4,4.3c0,0-0.2,0.1-0.4,0.4c-0.2,0.3-0.4,0.9-0.4,1.9c0,4.7,4.4,1.9,4.4,6.6  c0,4.7,5.3,6.6,5.3,2.8s3.5-5.6,3.5-8.5s-2.7-2.8-4.4-3.8c-1.8-0.9-2.7-2.4-6.1-1.9c-1.8-1.7-2.8-3.1-2-4.7c0.9-1.7,4.6-2,4.6-4.6  s-2.5-3.1-4.3-3.1c-0.8,0-2.5-0.6-3.9-1.3c1.7-1.7,3.8-3.1,6-4.1c1.6,0.7,4.3,1.8,6.6,1.8c2.7,0,4.1-1.9,3.7-3.1  c4.5,0.7,8.5,3,11.4,6.2c-1.5,0.9-3.5,1.9-7,1.9c-4.6,0-4.6,4.7-1.9,5.6c2.8,0.9,5.6-1.8,6.5,0c0.9,1.8-6.5,1.8-4.6,6.4  c1.9,4.6,3.7-0.1,5.6,4.5c1.9,4.6,5.6-0.7,2.8-4.3c-1.2-1.6-0.9-6.5,1.9-6.5h0.9c0.4,1.6,0.7,3.3,0.7,5C45,36.5,36.5,45,26,45z"/>
+                                        </svg>
+                                </div>
+                                <h4>Nemo Enim</h4>
+                                <div class="descprition">
+                                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- counts -->
+        <div class="counts">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-12 col-md-6 col-lg-3">
+                        <div class="count-box">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                                <g><path d="M178.087,144.696c-18.412,0-33.391,14.979-33.391,33.391c0,18.412,14.979,33.391,33.391,33.391    c18.412,0,33.391-14.979,33.391-33.391C211.478,159.675,196.499,144.696,178.087,144.696z"/><path d="M333.913,144.696c-18.412,0-33.391,14.979-33.391,33.391c0,18.412,14.979,33.391,33.391,33.391    c18.412,0,33.391-14.979,33.391-33.391C367.304,159.675,352.325,144.696,333.913,144.696z"/><path d="M256,0C114.842,0,0,114.842,0,256s114.842,256,256,256s256-114.842,256-256S397.158,0,256,0z M256,478.609    c-122.746,0-222.609-99.862-222.609-222.609S133.254,33.391,256,33.391S478.609,133.254,478.609,256S378.746,478.609,256,478.609z"/><path d="M395.13,239.304c-9.22,0-16.696,7.475-16.696,16.696c0,67.511-54.924,122.435-122.435,122.435    c-67.51,0-122.435-54.924-122.435-122.435c0-9.22-7.475-16.696-16.696-16.696S100.174,246.78,100.174,256    c0,85.923,69.904,155.826,155.826,155.826S411.826,341.922,411.826,256C411.826,246.78,404.351,239.304,395.13,239.304z"/></g>
+                            </svg>
+                            <span data-precounter-start="0" data-precounter-end="240" data-precounter-duration="0">240</span>
+                            <p>
+                                <strong class="d-sm-block d-md-block">Happy Clients</strong>
+                                consequuntur quae
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col col-12 col-md-6 col-lg-3">
+                        <div class="count-box">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 16 16" fill="currentColor" class="bi bi-journal-richtext">
+                                <path d="M7.5 3.75a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0zm-.861 1.542 1.33.886 1.854-1.855a.25.25 0 0 1 .289-.047L11 4.75V7a.5.5 0 0 1-.5.5h-5A.5.5 0 0 1 5 7v-.5s1.54-1.274 1.639-1.208zM5 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5z"/>
+                                <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z"/>
+                                <path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z"/>
+                              </svg>    
+                            <span data-precounter-start="0" data-precounter-end="240" data-precounter-duration="0">521</span>
+                            <p>
+                                <strong class="d-sm-block d-md-block">Projects</strong>adipisci atque cum quia aut
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col col-12 col-md-6 col-lg-3">
+                        <div class="count-box">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"viewBox="0 0 574.582 574.582" style="enable-background:new 0 0 574.582 574.582;" xml:space="preserve"><g><path d="M44.581,458.144h24.352c-4.621,92.173,91.928,110.398,167.027,107.491c3.103,5.331,8.813,8.947,15.422,8.947h76.42    c9.891,0,17.908-8.017,17.908-17.907v-15.777c0-9.89-8.018-17.907-17.908-17.907h-76.42c-8.715,0-15.961,6.23-17.564,14.48    c-60.777,3.151-139.383-5.937-136.262-79.321h32.957c8.409,0,15.22-6.817,15.22-15.227V264.574c0-8.409-6.818-15.227-15.22-15.227    H84.392C90.408,139.585,181.369,48.954,288.39,48.954c107.02,0,197.982,90.625,203.998,200.393h-48.324    c-8.408,0-15.221,6.818-15.221,15.227v178.349c0,8.409,6.812,15.227,15.221,15.227h85.938c8.408,0,15.227-6.817,15.227-15.227    V264.574c0-3.776-1.426-7.185-3.703-9.847C538.202,116.023,423.685,0,288.39,0C153.798,0,39.765,114.83,35.309,252.579    c-3.599,2.778-5.955,7.093-5.955,11.995v178.349C29.354,451.325,36.172,458.144,44.581,458.144z"/></g>
+                            </svg>
+                            <span data-precounter-start="0" data-precounter-end="240" data-precounter-duration="0">1500</span>
+                            <p>
+                                <strong class="d-sm-block d-md-block">Hours Of Support</strong>
+                                aut commodi quaerat
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col col-12 col-md-6 col-lg-3">
+                        <div class="count-box">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3.5 8a5.5 5.5 0 118.596 4.547 9.005 9.005 0 015.9 8.18.75.75 0 01-1.5.045 7.5 7.5 0 00-14.993 0 .75.75 0 01-1.499-.044 9.005 9.005 0 015.9-8.181A5.494 5.494 0 013.5 8zM9 4a4 4 0 100 8 4 4 0 000-8z"/><path d="M17.29 8c-.148 0-.292.01-.434.03a.75.75 0 11-.212-1.484 4.53 4.53 0 013.38 8.097 6.69 6.69 0 013.956 6.107.75.75 0 01-1.5 0 5.193 5.193 0 00-3.696-4.972l-.534-.16v-1.676l.41-.209A3.03 3.03 0 0017.29 8z"/></svg>
+                            <span data-precounter-start="0" data-precounter-end="240" data-precounter-duration="0">15</span>
+                            <p>
+                                <strong class="d-sm-block d-md-block">Hard Workers</strong>
+                                rerum asperiores dolor
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- cta-section -->
+        <div class="cta-section p-relative">
+            <div class="container">
+                <div class="row">
+                    <div class="text-center">
+                        <h3>Call to Action</h3>
+                        <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <a href="#" target="_blank" class="cta-btn">Call To Action</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- portfolio -->
+        <div class="portfolio">
+            <div class="container">
+                <div class="section-title">
+                    <h2 class="p-relative">
+                        <span class="p-relative">
+                        portfolio
+                        </span>
+                    </h2>
+                    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+                </div>
+                <div class="row">
+                    <div class="col col-12">
+                        <ul class="img-list">
+                            <li><a href="#">All</a></li>
+                            <li><a href="#">App</a></li>
+                            <li><a href="#">Card</a></li>
+                            <li><a href="#">Web</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-12 col-sm-6 col-lg-4 py-15">
+                        <div class="box p-relative">
+                            <div class="image-box">
+                                <img src="https://bootstrapmade.com/demo/templates/Squadfree/assets/img/portfolio/portfolio-1.jpg">
+                            </div>
+                            <div class="desc-box p-absolute">
+                                <div class="hover-box">
+                                    <div class="row">
+                                        <div class="col col-6">
+                                            <li>
+                                                <a href="#">
+                                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"viewBox="0 0 455 455" style="enable-background:new 0 0 455 455;" xml:space="preserve">
+                                                    <polygon points="455,212.5 242.5,212.5 242.5,0 212.5,0 212.5,212.5 0,212.5 0,242.5 212.5,242.5 212.5,455 242.5,455 242.5,242.5   455,242.5 "/>
+                                                </svg>
+                                                </a>
+                                            </li>
+                                            
+                                        </div>
+                                        <div class="col col-6">
+                                            <li>
+                                                <a href="#">
+                                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"width="442.246px" height="442.246px" viewBox="0 0 442.246 442.246" style="enable-background:new 0 0 442.246 442.246;" xml:space="preserve"><g><path d="M409.657,32.474c-43.146-43.146-113.832-43.146-156.978,0l-84.763,84.762c29.07-8.262,60.589-6.12,88.129,6.732    l44.063-44.064c17.136-17.136,44.982-17.136,62.118,0c17.136,17.136,17.136,44.982,0,62.118l-55.386,55.386l-36.414,36.414    c-17.136,17.136-44.982,17.136-62.119,0l-47.43,47.43c11.016,11.017,23.868,19.278,37.332,24.48    c36.415,14.382,78.643,8.874,110.467-16.219c3.06-2.447,6.426-5.201,9.18-8.262l57.222-57.222l34.578-34.578    C453.109,146.306,453.109,75.926,409.657,32.474z"/><path d="M184.135,320.114l-42.228,42.228c-17.136,17.137-44.982,17.137-62.118,0c-17.136-17.136-17.136-44.981,0-62.118    l91.8-91.799c17.136-17.136,44.982-17.136,62.119,0l47.43-47.43c-11.016-11.016-23.868-19.278-37.332-24.48    c-38.25-15.3-83.232-8.262-115.362,20.502c-1.53,1.224-3.06,2.754-4.284,3.978l-91.8,91.799    c-43.146,43.146-43.146,113.832,0,156.979c43.146,43.146,113.832,43.146,156.978,0l82.927-83.845    C230.035,335.719,220.243,334.496,184.135,320.114z"/></g>
+                                                </svg>
+                                                </a>
+                                            </li>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-12 col-sm-6 col-lg-4 py-15">
+                        <div class="box p-relative">
+                            <div class="image-box">
+                                <img src="https://bootstrapmade.com/demo/templates/Squadfree/assets/img/portfolio/portfolio-2.jpg">
+                            </div>
+                            <div class="desc-box p-absolute">
+                                <div class="hover-box">
+                                    <div class="row">
+                                        <div class="col col-6">
+                                            <li>
+                                                <a href="#">
+                                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"viewBox="0 0 455 455" style="enable-background:new 0 0 455 455;" xml:space="preserve">
+                                                    <polygon points="455,212.5 242.5,212.5 242.5,0 212.5,0 212.5,212.5 0,212.5 0,242.5 212.5,242.5 212.5,455 242.5,455 242.5,242.5   455,242.5 "/>
+                                                </svg>
+                                                </a>
+                                            </li>
+                                            
+                                        </div>
+                                        <div class="col col-6">
+                                            <li>
+                                                <a href="#">
+                                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"width="442.246px" height="442.246px" viewBox="0 0 442.246 442.246" style="enable-background:new 0 0 442.246 442.246;" xml:space="preserve"><g><path d="M409.657,32.474c-43.146-43.146-113.832-43.146-156.978,0l-84.763,84.762c29.07-8.262,60.589-6.12,88.129,6.732    l44.063-44.064c17.136-17.136,44.982-17.136,62.118,0c17.136,17.136,17.136,44.982,0,62.118l-55.386,55.386l-36.414,36.414    c-17.136,17.136-44.982,17.136-62.119,0l-47.43,47.43c11.016,11.017,23.868,19.278,37.332,24.48    c36.415,14.382,78.643,8.874,110.467-16.219c3.06-2.447,6.426-5.201,9.18-8.262l57.222-57.222l34.578-34.578    C453.109,146.306,453.109,75.926,409.657,32.474z"/><path d="M184.135,320.114l-42.228,42.228c-17.136,17.137-44.982,17.137-62.118,0c-17.136-17.136-17.136-44.981,0-62.118    l91.8-91.799c17.136-17.136,44.982-17.136,62.119,0l47.43-47.43c-11.016-11.016-23.868-19.278-37.332-24.48    c-38.25-15.3-83.232-8.262-115.362,20.502c-1.53,1.224-3.06,2.754-4.284,3.978l-91.8,91.799    c-43.146,43.146-43.146,113.832,0,156.979c43.146,43.146,113.832,43.146,156.978,0l82.927-83.845    C230.035,335.719,220.243,334.496,184.135,320.114z"/></g>
+                                                </svg>
+                                                </a>
+                                            </li>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-12 col-sm-6 col-lg-4 py-15">
+                        <div class="box p-relative">
+                            <div class="image-box">
+                                <img  src="https://bootstrapmade.com/demo/templates/Squadfree/assets/img/portfolio/portfolio-3.jpg">
+                            </div>
+                            <div class="desc-box p-absolute">
+                                <div class="hover-box">
+                                    <div class="row">
+                                        <div class="col col-6">
+                                            <li>
+                                                <a href="#">
+                                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"viewBox="0 0 455 455" style="enable-background:new 0 0 455 455;" xml:space="preserve">
+                                                    <polygon points="455,212.5 242.5,212.5 242.5,0 212.5,0 212.5,212.5 0,212.5 0,242.5 212.5,242.5 212.5,455 242.5,455 242.5,242.5   455,242.5 "/>
+                                                </svg>
+                                                </a>
+                                            </li>
+                                            
+                                        </div>
+                                        <div class="col col-6">
+                                            <li>
+                                                <a href="#">
+                                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"width="442.246px" height="442.246px" viewBox="0 0 442.246 442.246" style="enable-background:new 0 0 442.246 442.246;" xml:space="preserve"><g><path d="M409.657,32.474c-43.146-43.146-113.832-43.146-156.978,0l-84.763,84.762c29.07-8.262,60.589-6.12,88.129,6.732    l44.063-44.064c17.136-17.136,44.982-17.136,62.118,0c17.136,17.136,17.136,44.982,0,62.118l-55.386,55.386l-36.414,36.414    c-17.136,17.136-44.982,17.136-62.119,0l-47.43,47.43c11.016,11.017,23.868,19.278,37.332,24.48    c36.415,14.382,78.643,8.874,110.467-16.219c3.06-2.447,6.426-5.201,9.18-8.262l57.222-57.222l34.578-34.578    C453.109,146.306,453.109,75.926,409.657,32.474z"/><path d="M184.135,320.114l-42.228,42.228c-17.136,17.137-44.982,17.137-62.118,0c-17.136-17.136-17.136-44.981,0-62.118    l91.8-91.799c17.136-17.136,44.982-17.136,62.119,0l47.43-47.43c-11.016-11.016-23.868-19.278-37.332-24.48    c-38.25-15.3-83.232-8.262-115.362,20.502c-1.53,1.224-3.06,2.754-4.284,3.978l-91.8,91.799    c-43.146,43.146-43.146,113.832,0,156.979c43.146,43.146,113.832,43.146,156.978,0l82.927-83.845    C230.035,335.719,220.243,334.496,184.135,320.114z"/></g>
+                                                </svg>
+                                                </a>
+                                            </li>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-12 col-sm-6 col-lg-4 py-15">
+                        <div class="box p-relative">
+                            <div class="image-box">
+                                <img src="https://bootstrapmade.com/demo/templates/Squadfree/assets/img/portfolio/portfolio-4.jpg">
+                            </div>
+                            <div class="desc-box p-absolute">
+                                <div class="hover-box">
+                                    <div class="row">
+                                        <div class="col col-6">
+                                            <li>
+                                                <a href="#">
+                                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"viewBox="0 0 455 455" style="enable-background:new 0 0 455 455;" xml:space="preserve">
+                                                    <polygon points="455,212.5 242.5,212.5 242.5,0 212.5,0 212.5,212.5 0,212.5 0,242.5 212.5,242.5 212.5,455 242.5,455 242.5,242.5   455,242.5 "/>
+                                                </svg>
+                                                </a>
+                                            </li>
+                                            
+                                        </div>
+                                        <div class="col col-6">
+                                            <li>
+                                                <a href="#">
+                                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"width="442.246px" height="442.246px" viewBox="0 0 442.246 442.246" style="enable-background:new 0 0 442.246 442.246;" xml:space="preserve"><g><path d="M409.657,32.474c-43.146-43.146-113.832-43.146-156.978,0l-84.763,84.762c29.07-8.262,60.589-6.12,88.129,6.732    l44.063-44.064c17.136-17.136,44.982-17.136,62.118,0c17.136,17.136,17.136,44.982,0,62.118l-55.386,55.386l-36.414,36.414    c-17.136,17.136-44.982,17.136-62.119,0l-47.43,47.43c11.016,11.017,23.868,19.278,37.332,24.48    c36.415,14.382,78.643,8.874,110.467-16.219c3.06-2.447,6.426-5.201,9.18-8.262l57.222-57.222l34.578-34.578    C453.109,146.306,453.109,75.926,409.657,32.474z"/><path d="M184.135,320.114l-42.228,42.228c-17.136,17.137-44.982,17.137-62.118,0c-17.136-17.136-17.136-44.981,0-62.118    l91.8-91.799c17.136-17.136,44.982-17.136,62.119,0l47.43-47.43c-11.016-11.016-23.868-19.278-37.332-24.48    c-38.25-15.3-83.232-8.262-115.362,20.502c-1.53,1.224-3.06,2.754-4.284,3.978l-91.8,91.799    c-43.146,43.146-43.146,113.832,0,156.979c43.146,43.146,113.832,43.146,156.978,0l82.927-83.845    C230.035,335.719,220.243,334.496,184.135,320.114z"/></g>
+                                                </svg>
+                                                </a>
+                                            </li>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-12 col-sm-6 col-lg-4 py-15">
+                        <div class="box p-relative">
+                            <div class="image-box">
+                                <img src="https://bootstrapmade.com/demo/templates/Squadfree/assets/img/portfolio/portfolio-5.jpg">
+                            </div>
+                            <div class="desc-box p-absolute">
+                                <div class="hover-box">
+                                    <div class="row">
+                                        <div class="col col-6">
+                                            <li>
+                                                <a href="#">
+                                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"viewBox="0 0 455 455" style="enable-background:new 0 0 455 455;" xml:space="preserve">
+                                                    <polygon points="455,212.5 242.5,212.5 242.5,0 212.5,0 212.5,212.5 0,212.5 0,242.5 212.5,242.5 212.5,455 242.5,455 242.5,242.5   455,242.5 "/>
+                                                </svg>
+                                                </a>
+                                            </li>
+                                            
+                                        </div>
+                                        <div class="col col-6">
+                                            <li>
+                                                <a href="#">
+                                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"width="442.246px" height="442.246px" viewBox="0 0 442.246 442.246" style="enable-background:new 0 0 442.246 442.246;" xml:space="preserve"><g><path d="M409.657,32.474c-43.146-43.146-113.832-43.146-156.978,0l-84.763,84.762c29.07-8.262,60.589-6.12,88.129,6.732    l44.063-44.064c17.136-17.136,44.982-17.136,62.118,0c17.136,17.136,17.136,44.982,0,62.118l-55.386,55.386l-36.414,36.414    c-17.136,17.136-44.982,17.136-62.119,0l-47.43,47.43c11.016,11.017,23.868,19.278,37.332,24.48    c36.415,14.382,78.643,8.874,110.467-16.219c3.06-2.447,6.426-5.201,9.18-8.262l57.222-57.222l34.578-34.578    C453.109,146.306,453.109,75.926,409.657,32.474z"/><path d="M184.135,320.114l-42.228,42.228c-17.136,17.137-44.982,17.137-62.118,0c-17.136-17.136-17.136-44.981,0-62.118    l91.8-91.799c17.136-17.136,44.982-17.136,62.119,0l47.43-47.43c-11.016-11.016-23.868-19.278-37.332-24.48    c-38.25-15.3-83.232-8.262-115.362,20.502c-1.53,1.224-3.06,2.754-4.284,3.978l-91.8,91.799    c-43.146,43.146-43.146,113.832,0,156.979c43.146,43.146,113.832,43.146,156.978,0l82.927-83.845    C230.035,335.719,220.243,334.496,184.135,320.114z"/></g>
+                                                </svg>
+                                                </a>
+                                            </li>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-12 col-sm-6 col-lg-4 py-15">
+                        <div class="box p-relative">
+                            <div class="image-box">
+                                <img src="https://bootstrapmade.com/demo/templates/Squadfree/assets/img/portfolio/portfolio-6.jpg">
+                            </div>
+                            <div class="desc-box p-absolute">
+                                <div class="hover-box">
+                                    <div class="row">
+                                        <div class="col col-6">
+                                            <li>
+                                                <a href="#">
+                                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"viewBox="0 0 455 455" style="enable-background:new 0 0 455 455;" xml:space="preserve">
+                                                    <polygon points="455,212.5 242.5,212.5 242.5,0 212.5,0 212.5,212.5 0,212.5 0,242.5 212.5,242.5 212.5,455 242.5,455 242.5,242.5   455,242.5 "/>
+                                                </svg>
+                                                </a>
+                                            </li>
+                                            
+                                        </div>
+                                        <div class="col col-6">
+                                            <li>
+                                                <a href="#">
+                                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"width="442.246px" height="442.246px" viewBox="0 0 442.246 442.246" style="enable-background:new 0 0 442.246 442.246;" xml:space="preserve"><g><path d="M409.657,32.474c-43.146-43.146-113.832-43.146-156.978,0l-84.763,84.762c29.07-8.262,60.589-6.12,88.129,6.732    l44.063-44.064c17.136-17.136,44.982-17.136,62.118,0c17.136,17.136,17.136,44.982,0,62.118l-55.386,55.386l-36.414,36.414    c-17.136,17.136-44.982,17.136-62.119,0l-47.43,47.43c11.016,11.017,23.868,19.278,37.332,24.48    c36.415,14.382,78.643,8.874,110.467-16.219c3.06-2.447,6.426-5.201,9.18-8.262l57.222-57.222l34.578-34.578    C453.109,146.306,453.109,75.926,409.657,32.474z"/><path d="M184.135,320.114l-42.228,42.228c-17.136,17.137-44.982,17.137-62.118,0c-17.136-17.136-17.136-44.981,0-62.118    l91.8-91.799c17.136-17.136,44.982-17.136,62.119,0l47.43-47.43c-11.016-11.016-23.868-19.278-37.332-24.48    c-38.25-15.3-83.232-8.262-115.362,20.502c-1.53,1.224-3.06,2.754-4.284,3.978l-91.8,91.799    c-43.146,43.146-43.146,113.832,0,156.979c43.146,43.146,113.832,43.146,156.978,0l82.927-83.845    C230.035,335.719,220.243,334.496,184.135,320.114z"/></g>
+                                                </svg>
+                                                </a>
+                                            </li>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-12 col-sm-6 col-lg-4 py-15">
+                        <div class="box p-relative">
+                            <div class="image-box">
+                                <img src="https://bootstrapmade.com/demo/templates/Squadfree/assets/img/portfolio/portfolio-7.jpg">
+                            </div>
+                            <div class="desc-box p-absolute">
+                                <div class="hover-box">
+                                    <div class="row">
+                                        <div class="col col-6">
+                                            <li>
+                                                <a href="#">
+                                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"viewBox="0 0 455 455" style="enable-background:new 0 0 455 455;" xml:space="preserve">
+                                                    <polygon points="455,212.5 242.5,212.5 242.5,0 212.5,0 212.5,212.5 0,212.5 0,242.5 212.5,242.5 212.5,455 242.5,455 242.5,242.5   455,242.5 "/>
+                                                </svg>
+                                                </a>
+                                            </li>
+                                            
+                                        </div>
+                                        <div class="col col-6">
+                                            <li>
+                                                <a href="#">
+                                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"width="442.246px" height="442.246px" viewBox="0 0 442.246 442.246" style="enable-background:new 0 0 442.246 442.246;" xml:space="preserve"><g><path d="M409.657,32.474c-43.146-43.146-113.832-43.146-156.978,0l-84.763,84.762c29.07-8.262,60.589-6.12,88.129,6.732    l44.063-44.064c17.136-17.136,44.982-17.136,62.118,0c17.136,17.136,17.136,44.982,0,62.118l-55.386,55.386l-36.414,36.414    c-17.136,17.136-44.982,17.136-62.119,0l-47.43,47.43c11.016,11.017,23.868,19.278,37.332,24.48    c36.415,14.382,78.643,8.874,110.467-16.219c3.06-2.447,6.426-5.201,9.18-8.262l57.222-57.222l34.578-34.578    C453.109,146.306,453.109,75.926,409.657,32.474z"/><path d="M184.135,320.114l-42.228,42.228c-17.136,17.137-44.982,17.137-62.118,0c-17.136-17.136-17.136-44.981,0-62.118    l91.8-91.799c17.136-17.136,44.982-17.136,62.119,0l47.43-47.43c-11.016-11.016-23.868-19.278-37.332-24.48    c-38.25-15.3-83.232-8.262-115.362,20.502c-1.53,1.224-3.06,2.754-4.284,3.978l-91.8,91.799    c-43.146,43.146-43.146,113.832,0,156.979c43.146,43.146,113.832,43.146,156.978,0l82.927-83.845    C230.035,335.719,220.243,334.496,184.135,320.114z"/></g>
+                                                </svg>
+                                                </a>
+                                            </li>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-12 col-sm-6 col-lg-4 py-15">
+                        <div class="box p-relative">
+                            <div class="image-box">
+                                <img src="https://bootstrapmade.com/demo/templates/Squadfree/assets/img/portfolio/portfolio-8.jpg">
+                            </div>
+                            <div class="desc-box p-absolute">
+                                <div class="hover-box">
+                                    <div class="row">
+                                        <div class="col col-6">
+                                            <li>
+                                                <a href="#">
+                                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"viewBox="0 0 455 455" style="enable-background:new 0 0 455 455;" xml:space="preserve">
+                                                    <polygon points="455,212.5 242.5,212.5 242.5,0 212.5,0 212.5,212.5 0,212.5 0,242.5 212.5,242.5 212.5,455 242.5,455 242.5,242.5   455,242.5 "/>
+                                                </svg>
+                                                </a>
+                                            </li>
+                                            
+                                        </div>
+                                        <div class="col col-6">
+                                            <li>
+                                                <a href="#">
+                                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"width="442.246px" height="442.246px" viewBox="0 0 442.246 442.246" style="enable-background:new 0 0 442.246 442.246;" xml:space="preserve"><g><path d="M409.657,32.474c-43.146-43.146-113.832-43.146-156.978,0l-84.763,84.762c29.07-8.262,60.589-6.12,88.129,6.732    l44.063-44.064c17.136-17.136,44.982-17.136,62.118,0c17.136,17.136,17.136,44.982,0,62.118l-55.386,55.386l-36.414,36.414    c-17.136,17.136-44.982,17.136-62.119,0l-47.43,47.43c11.016,11.017,23.868,19.278,37.332,24.48    c36.415,14.382,78.643,8.874,110.467-16.219c3.06-2.447,6.426-5.201,9.18-8.262l57.222-57.222l34.578-34.578    C453.109,146.306,453.109,75.926,409.657,32.474z"/><path d="M184.135,320.114l-42.228,42.228c-17.136,17.137-44.982,17.137-62.118,0c-17.136-17.136-17.136-44.981,0-62.118    l91.8-91.799c17.136-17.136,44.982-17.136,62.119,0l47.43-47.43c-11.016-11.016-23.868-19.278-37.332-24.48    c-38.25-15.3-83.232-8.262-115.362,20.502c-1.53,1.224-3.06,2.754-4.284,3.978l-91.8,91.799    c-43.146,43.146-43.146,113.832,0,156.979c43.146,43.146,113.832,43.146,156.978,0l82.927-83.845    C230.035,335.719,220.243,334.496,184.135,320.114z"/></g>
+                                                </svg>
+                                                </a>
+                                            </li>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-12 col-sm-6 col-lg-4 py-15 d-md-block d-none">
+                        <div class="box p-relative">
+                            <div class="image-box">
+                                <img src="https://bootstrapmade.com/demo/templates/Squadfree/assets/img/portfolio/portfolio-9.jpg">
+                            </div>
+                            <div class="desc-box p-absolute">
+                                <div class="hover-box">
+                                    <div class="row">
+                                        <div class="col col-6">
+                                            <li>
+                                                <a href="#">
+                                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"viewBox="0 0 455 455" style="enable-background:new 0 0 455 455;" xml:space="preserve">
+                                                    <polygon points="455,212.5 242.5,212.5 242.5,0 212.5,0 212.5,212.5 0,212.5 0,242.5 212.5,242.5 212.5,455 242.5,455 242.5,242.5   455,242.5 "/>
+                                                </svg>
+                                                </a>
+                                            </li>
+                                            
+                                        </div>
+                                        <div class="col col-6">
+                                            <li>
+                                                <a href="#">
+                                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"width="442.246px" height="442.246px" viewBox="0 0 442.246 442.246" style="enable-background:new 0 0 442.246 442.246;" xml:space="preserve"><g><path d="M409.657,32.474c-43.146-43.146-113.832-43.146-156.978,0l-84.763,84.762c29.07-8.262,60.589-6.12,88.129,6.732    l44.063-44.064c17.136-17.136,44.982-17.136,62.118,0c17.136,17.136,17.136,44.982,0,62.118l-55.386,55.386l-36.414,36.414    c-17.136,17.136-44.982,17.136-62.119,0l-47.43,47.43c11.016,11.017,23.868,19.278,37.332,24.48    c36.415,14.382,78.643,8.874,110.467-16.219c3.06-2.447,6.426-5.201,9.18-8.262l57.222-57.222l34.578-34.578    C453.109,146.306,453.109,75.926,409.657,32.474z"/><path d="M184.135,320.114l-42.228,42.228c-17.136,17.137-44.982,17.137-62.118,0c-17.136-17.136-17.136-44.981,0-62.118    l91.8-91.799c17.136-17.136,44.982-17.136,62.119,0l47.43-47.43c-11.016-11.016-23.868-19.278-37.332-24.48    c-38.25-15.3-83.232-8.262-115.362,20.502c-1.53,1.224-3.06,2.754-4.284,3.978l-91.8,91.799    c-43.146,43.146-43.146,113.832,0,156.979c43.146,43.146,113.832,43.146,156.978,0l82.927-83.845    C230.035,335.719,220.243,334.496,184.135,320.114z"/></g>
+                                                </svg>
+                                                </a>
+                                            </li>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- testimonial section -->
+        <div class="testimonial">
+            <div class="container">
+                <div class="section-title">
+                    <h2 class="p-relative">
+                        <span class="p-relative">
+                        Testimonial
+                        </span>
+                    </h2>
+                    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+                </div>
+                <div class="testimonial-">
+                    <div class="row">
+                        <div class="testimonial-slider">
+                            <div>
+                                <div class="testimonial-box col col-12 col-lg-4">
+                                    <div class="testimonial-item d-inline-block">
+                                        <p>
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  viewBox="0 0 95.333 95.332" style="enable-background:new 0 0 95.333 95.332;" xml:space="preserve">
+                                            <g><path d="M30.512,43.939c-2.348-0.676-4.696-1.019-6.98-1.019c-3.527,0-6.47,0.806-8.752,1.793    c2.2-8.054,7.485-21.951,18.013-23.516c0.975-0.145,1.774-0.85,2.04-1.799l2.301-8.23c0.194-0.696,0.079-1.441-0.318-2.045    s-1.035-1.007-1.75-1.105c-0.777-0.106-1.569-0.16-2.354-0.16c-12.637,0-25.152,13.19-30.433,32.076    c-3.1,11.08-4.009,27.738,3.627,38.223c4.273,5.867,10.507,9,18.529,9.313c0.033,0.001,0.065,0.002,0.098,0.002    c9.898,0,18.675-6.666,21.345-16.209c1.595-5.705,0.874-11.688-2.032-16.851C40.971,49.307,36.236,45.586,30.512,43.939z"/><path d="M92.471,54.413c-2.875-5.106-7.61-8.827-13.334-10.474c-2.348-0.676-4.696-1.019-6.979-1.019    c-3.527,0-6.471,0.806-8.753,1.793c2.2-8.054,7.485-21.951,18.014-23.516c0.975-0.145,1.773-0.85,2.04-1.799l2.301-8.23    c0.194-0.696,0.079-1.441-0.318-2.045c-0.396-0.604-1.034-1.007-1.75-1.105c-0.776-0.106-1.568-0.16-2.354-0.16    c-12.637,0-25.152,13.19-30.434,32.076c-3.099,11.08-4.008,27.738,3.629,38.225c4.272,5.866,10.507,9,18.528,9.312    c0.033,0.001,0.065,0.002,0.099,0.002c9.897,0,18.675-6.666,21.345-16.209C96.098,65.559,95.376,59.575,92.471,54.413z"/></g>
+                                            </svg>
+                                            Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam. 
+
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="second" viewBox="0 0 95.333 95.332" style="enable-background:new 0 0 95.333 95.332;" xml:space="preserve"><g><path d="M30.512,43.939c-2.348-0.676-4.696-1.019-6.98-1.019c-3.527,0-6.47,0.806-8.752,1.793    c2.2-8.054,7.485-21.951,18.013-23.516c0.975-0.145,1.774-0.85,2.04-1.799l2.301-8.23c0.194-0.696,0.079-1.441-0.318-2.045    s-1.035-1.007-1.75-1.105c-0.777-0.106-1.569-0.16-2.354-0.16c-12.637,0-25.152,13.19-30.433,32.076    c-3.1,11.08-4.009,27.738,3.627,38.223c4.273,5.867,10.507,9,18.529,9.313c0.033,0.001,0.065,0.002,0.098,0.002    c9.898,0,18.675-6.666,21.345-16.209c1.595-5.705,0.874-11.688-2.032-16.851C40.971,49.307,36.236,45.586,30.512,43.939z"/><path d="M92.471,54.413c-2.875-5.106-7.61-8.827-13.334-10.474c-2.348-0.676-4.696-1.019-6.979-1.019    c-3.527,0-6.471,0.806-8.753,1.793c2.2-8.054,7.485-21.951,18.014-23.516c0.975-0.145,1.773-0.85,2.04-1.799l2.301-8.23    c0.194-0.696,0.079-1.441-0.318-2.045c-0.396-0.604-1.034-1.007-1.75-1.105c-0.776-0.106-1.568-0.16-2.354-0.16    c-12.637,0-25.152,13.19-30.434,32.076c-3.099,11.08-4.008,27.738,3.629,38.225c4.272,5.866,10.507,9,18.528,9.312    c0.033,0.001,0.065,0.002,0.099,0.002c9.897,0,18.675-6.666,21.345-16.209C96.098,65.559,95.376,59.575,92.471,54.413z"/></g></svg>
+                                        </p>
+                                        <img style="display: block;-webkit-user-select: none;margin: auto;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src="https://bootstrapmade.com/demo/templates/Squadfree/assets/img/testimonials/testimonials-4.jpg">
+                                        <h3>Matt Brandon</h3>
+                                        <h4>Freelancer</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="testimonial-box col col-12 col-lg-4 ">
+                                    <div class="testimonial-item d-inline-block">
+                                        <p>
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  viewBox="0 0 95.333 95.332" style="enable-background:new 0 0 95.333 95.332;" xml:space="preserve">
+                                                <g><path d="M30.512,43.939c-2.348-0.676-4.696-1.019-6.98-1.019c-3.527,0-6.47,0.806-8.752,1.793    c2.2-8.054,7.485-21.951,18.013-23.516c0.975-0.145,1.774-0.85,2.04-1.799l2.301-8.23c0.194-0.696,0.079-1.441-0.318-2.045    s-1.035-1.007-1.75-1.105c-0.777-0.106-1.569-0.16-2.354-0.16c-12.637,0-25.152,13.19-30.433,32.076    c-3.1,11.08-4.009,27.738,3.627,38.223c4.273,5.867,10.507,9,18.529,9.313c0.033,0.001,0.065,0.002,0.098,0.002    c9.898,0,18.675-6.666,21.345-16.209c1.595-5.705,0.874-11.688-2.032-16.851C40.971,49.307,36.236,45.586,30.512,43.939z"/><path d="M92.471,54.413c-2.875-5.106-7.61-8.827-13.334-10.474c-2.348-0.676-4.696-1.019-6.979-1.019    c-3.527,0-6.471,0.806-8.753,1.793c2.2-8.054,7.485-21.951,18.014-23.516c0.975-0.145,1.773-0.85,2.04-1.799l2.301-8.23    c0.194-0.696,0.079-1.441-0.318-2.045c-0.396-0.604-1.034-1.007-1.75-1.105c-0.776-0.106-1.568-0.16-2.354-0.16    c-12.637,0-25.152,13.19-30.434,32.076c-3.099,11.08-4.008,27.738,3.629,38.225c4.272,5.866,10.507,9,18.528,9.312    c0.033,0.001,0.065,0.002,0.099,0.002c9.897,0,18.675-6.666,21.345-16.209C96.098,65.559,95.376,59.575,92.471,54.413z"/></g>
+                                                </svg>
+                                            Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam. 
+
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="second"  viewBox="0 0 95.333 95.332" style="enable-background:new 0 0 95.333 95.332;" xml:space="preserve">
+                                                <g><path d="M30.512,43.939c-2.348-0.676-4.696-1.019-6.98-1.019c-3.527,0-6.47,0.806-8.752,1.793    c2.2-8.054,7.485-21.951,18.013-23.516c0.975-0.145,1.774-0.85,2.04-1.799l2.301-8.23c0.194-0.696,0.079-1.441-0.318-2.045    s-1.035-1.007-1.75-1.105c-0.777-0.106-1.569-0.16-2.354-0.16c-12.637,0-25.152,13.19-30.433,32.076    c-3.1,11.08-4.009,27.738,3.627,38.223c4.273,5.867,10.507,9,18.529,9.313c0.033,0.001,0.065,0.002,0.098,0.002    c9.898,0,18.675-6.666,21.345-16.209c1.595-5.705,0.874-11.688-2.032-16.851C40.971,49.307,36.236,45.586,30.512,43.939z"/><path d="M92.471,54.413c-2.875-5.106-7.61-8.827-13.334-10.474c-2.348-0.676-4.696-1.019-6.979-1.019    c-3.527,0-6.471,0.806-8.753,1.793c2.2-8.054,7.485-21.951,18.014-23.516c0.975-0.145,1.773-0.85,2.04-1.799l2.301-8.23    c0.194-0.696,0.079-1.441-0.318-2.045c-0.396-0.604-1.034-1.007-1.75-1.105c-0.776-0.106-1.568-0.16-2.354-0.16    c-12.637,0-25.152,13.19-30.434,32.076c-3.099,11.08-4.008,27.738,3.629,38.225c4.272,5.866,10.507,9,18.528,9.312    c0.033,0.001,0.065,0.002,0.099,0.002c9.897,0,18.675-6.666,21.345-16.209C96.098,65.559,95.376,59.575,92.471,54.413z"/></g>
+                                                </svg>
+                                        </p>
+                                        <img src="https://bootstrapmade.com/demo/templates/Squadfree/assets/img/testimonials/testimonials-5.jpg">
+                                        <h3>Matt Brandon</h3>
+                                        <h4>Freelancer</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="testimonial-box col col-12 col-lg-4">
+                                <div class="testimonial-item d-inline-block">
+                                    <p>
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  viewBox="0 0 95.333 95.332" style="enable-background:new 0 0 95.333 95.332;" xml:space="preserve">
+                                            <g><path d="M30.512,43.939c-2.348-0.676-4.696-1.019-6.98-1.019c-3.527,0-6.47,0.806-8.752,1.793    c2.2-8.054,7.485-21.951,18.013-23.516c0.975-0.145,1.774-0.85,2.04-1.799l2.301-8.23c0.194-0.696,0.079-1.441-0.318-2.045    s-1.035-1.007-1.75-1.105c-0.777-0.106-1.569-0.16-2.354-0.16c-12.637,0-25.152,13.19-30.433,32.076    c-3.1,11.08-4.009,27.738,3.627,38.223c4.273,5.867,10.507,9,18.529,9.313c0.033,0.001,0.065,0.002,0.098,0.002    c9.898,0,18.675-6.666,21.345-16.209c1.595-5.705,0.874-11.688-2.032-16.851C40.971,49.307,36.236,45.586,30.512,43.939z"/><path d="M92.471,54.413c-2.875-5.106-7.61-8.827-13.334-10.474c-2.348-0.676-4.696-1.019-6.979-1.019    c-3.527,0-6.471,0.806-8.753,1.793c2.2-8.054,7.485-21.951,18.014-23.516c0.975-0.145,1.773-0.85,2.04-1.799l2.301-8.23    c0.194-0.696,0.079-1.441-0.318-2.045c-0.396-0.604-1.034-1.007-1.75-1.105c-0.776-0.106-1.568-0.16-2.354-0.16    c-12.637,0-25.152,13.19-30.434,32.076c-3.099,11.08-4.008,27.738,3.629,38.225c4.272,5.866,10.507,9,18.528,9.312    c0.033,0.001,0.065,0.002,0.099,0.002c9.897,0,18.675-6.666,21.345-16.209C96.098,65.559,95.376,59.575,92.471,54.413z"/></g>
+                                            </svg>
+                                        Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam. 
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="second" viewBox="0 0 95.333 95.332" style="enable-background:new 0 0 95.333 95.332;" xml:space="preserve">
+                                            <g><path d="M30.512,43.939c-2.348-0.676-4.696-1.019-6.98-1.019c-3.527,0-6.47,0.806-8.752,1.793    c2.2-8.054,7.485-21.951,18.013-23.516c0.975-0.145,1.774-0.85,2.04-1.799l2.301-8.23c0.194-0.696,0.079-1.441-0.318-2.045    s-1.035-1.007-1.75-1.105c-0.777-0.106-1.569-0.16-2.354-0.16c-12.637,0-25.152,13.19-30.433,32.076    c-3.1,11.08-4.009,27.738,3.627,38.223c4.273,5.867,10.507,9,18.529,9.313c0.033,0.001,0.065,0.002,0.098,0.002    c9.898,0,18.675-6.666,21.345-16.209c1.595-5.705,0.874-11.688-2.032-16.851C40.971,49.307,36.236,45.586,30.512,43.939z"/><path d="M92.471,54.413c-2.875-5.106-7.61-8.827-13.334-10.474c-2.348-0.676-4.696-1.019-6.979-1.019    c-3.527,0-6.471,0.806-8.753,1.793c2.2-8.054,7.485-21.951,18.014-23.516c0.975-0.145,1.773-0.85,2.04-1.799l2.301-8.23    c0.194-0.696,0.079-1.441-0.318-2.045c-0.396-0.604-1.034-1.007-1.75-1.105c-0.776-0.106-1.568-0.16-2.354-0.16    c-12.637,0-25.152,13.19-30.434,32.076c-3.099,11.08-4.008,27.738,3.629,38.225c4.272,5.866,10.507,9,18.528,9.312    c0.033,0.001,0.065,0.002,0.099,0.002c9.897,0,18.675-6.666,21.345-16.209C96.098,65.559,95.376,59.575,92.471,54.413z"/></g>
+                                            </svg>
+                                    </p>
+                                    <img src="https://bootstrapmade.com/demo/templates/Squadfree/assets/img/testimonials/testimonials-1.jpg">
+                                    <h3>Matt Brandon</h3>
+                                    <h4>Freelancer</h4>
+                                </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="testimonial-box col col-12 col-lg-4">
+                                    <div class="testimonial-item d-inline-block">
+                                        <p>
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  viewBox="0 0 95.333 95.332" style="enable-background:new 0 0 95.333 95.332;" xml:space="preserve">
+                                            <g><path d="M30.512,43.939c-2.348-0.676-4.696-1.019-6.98-1.019c-3.527,0-6.47,0.806-8.752,1.793    c2.2-8.054,7.485-21.951,18.013-23.516c0.975-0.145,1.774-0.85,2.04-1.799l2.301-8.23c0.194-0.696,0.079-1.441-0.318-2.045    s-1.035-1.007-1.75-1.105c-0.777-0.106-1.569-0.16-2.354-0.16c-12.637,0-25.152,13.19-30.433,32.076    c-3.1,11.08-4.009,27.738,3.627,38.223c4.273,5.867,10.507,9,18.529,9.313c0.033,0.001,0.065,0.002,0.098,0.002    c9.898,0,18.675-6.666,21.345-16.209c1.595-5.705,0.874-11.688-2.032-16.851C40.971,49.307,36.236,45.586,30.512,43.939z"/><path d="M92.471,54.413c-2.875-5.106-7.61-8.827-13.334-10.474c-2.348-0.676-4.696-1.019-6.979-1.019    c-3.527,0-6.471,0.806-8.753,1.793c2.2-8.054,7.485-21.951,18.014-23.516c0.975-0.145,1.773-0.85,2.04-1.799l2.301-8.23    c0.194-0.696,0.079-1.441-0.318-2.045c-0.396-0.604-1.034-1.007-1.75-1.105c-0.776-0.106-1.568-0.16-2.354-0.16    c-12.637,0-25.152,13.19-30.434,32.076c-3.099,11.08-4.008,27.738,3.629,38.225c4.272,5.866,10.507,9,18.528,9.312    c0.033,0.001,0.065,0.002,0.099,0.002c9.897,0,18.675-6.666,21.345-16.209C96.098,65.559,95.376,59.575,92.471,54.413z"/></g>
+                                            </svg>
+                                            Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam. 
+
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="second" viewBox="0 0 95.333 95.332" style="enable-background:new 0 0 95.333 95.332;" xml:space="preserve"><g><path d="M30.512,43.939c-2.348-0.676-4.696-1.019-6.98-1.019c-3.527,0-6.47,0.806-8.752,1.793    c2.2-8.054,7.485-21.951,18.013-23.516c0.975-0.145,1.774-0.85,2.04-1.799l2.301-8.23c0.194-0.696,0.079-1.441-0.318-2.045    s-1.035-1.007-1.75-1.105c-0.777-0.106-1.569-0.16-2.354-0.16c-12.637,0-25.152,13.19-30.433,32.076    c-3.1,11.08-4.009,27.738,3.627,38.223c4.273,5.867,10.507,9,18.529,9.313c0.033,0.001,0.065,0.002,0.098,0.002    c9.898,0,18.675-6.666,21.345-16.209c1.595-5.705,0.874-11.688-2.032-16.851C40.971,49.307,36.236,45.586,30.512,43.939z"/><path d="M92.471,54.413c-2.875-5.106-7.61-8.827-13.334-10.474c-2.348-0.676-4.696-1.019-6.979-1.019    c-3.527,0-6.471,0.806-8.753,1.793c2.2-8.054,7.485-21.951,18.014-23.516c0.975-0.145,1.773-0.85,2.04-1.799l2.301-8.23    c0.194-0.696,0.079-1.441-0.318-2.045c-0.396-0.604-1.034-1.007-1.75-1.105c-0.776-0.106-1.568-0.16-2.354-0.16    c-12.637,0-25.152,13.19-30.434,32.076c-3.099,11.08-4.008,27.738,3.629,38.225c4.272,5.866,10.507,9,18.528,9.312    c0.033,0.001,0.065,0.002,0.099,0.002c9.897,0,18.675-6.666,21.345-16.209C96.098,65.559,95.376,59.575,92.471,54.413z"/></g></svg>
+                                        </p>
+                                        <img style="display: block;-webkit-user-select: none;margin: auto;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src="https://bootstrapmade.com/demo/templates/Squadfree/assets/img/testimonials/testimonials-4.jpg">
+                                        <h3>Matt Brandon</h3>
+                                        <h4>Freelancer</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="testimonial-box col col-12 col-lg-4 ">
+                                    <div class="testimonial-item d-inline-block">
+                                        <p>
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  viewBox="0 0 95.333 95.332" style="enable-background:new 0 0 95.333 95.332;" xml:space="preserve">
+                                                <g><path d="M30.512,43.939c-2.348-0.676-4.696-1.019-6.98-1.019c-3.527,0-6.47,0.806-8.752,1.793    c2.2-8.054,7.485-21.951,18.013-23.516c0.975-0.145,1.774-0.85,2.04-1.799l2.301-8.23c0.194-0.696,0.079-1.441-0.318-2.045    s-1.035-1.007-1.75-1.105c-0.777-0.106-1.569-0.16-2.354-0.16c-12.637,0-25.152,13.19-30.433,32.076    c-3.1,11.08-4.009,27.738,3.627,38.223c4.273,5.867,10.507,9,18.529,9.313c0.033,0.001,0.065,0.002,0.098,0.002    c9.898,0,18.675-6.666,21.345-16.209c1.595-5.705,0.874-11.688-2.032-16.851C40.971,49.307,36.236,45.586,30.512,43.939z"/><path d="M92.471,54.413c-2.875-5.106-7.61-8.827-13.334-10.474c-2.348-0.676-4.696-1.019-6.979-1.019    c-3.527,0-6.471,0.806-8.753,1.793c2.2-8.054,7.485-21.951,18.014-23.516c0.975-0.145,1.773-0.85,2.04-1.799l2.301-8.23    c0.194-0.696,0.079-1.441-0.318-2.045c-0.396-0.604-1.034-1.007-1.75-1.105c-0.776-0.106-1.568-0.16-2.354-0.16    c-12.637,0-25.152,13.19-30.434,32.076c-3.099,11.08-4.008,27.738,3.629,38.225c4.272,5.866,10.507,9,18.528,9.312    c0.033,0.001,0.065,0.002,0.099,0.002c9.897,0,18.675-6.666,21.345-16.209C96.098,65.559,95.376,59.575,92.471,54.413z"/></g>
+                                                </svg>
+                                            Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam. 
+
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="second"  viewBox="0 0 95.333 95.332" style="enable-background:new 0 0 95.333 95.332;" xml:space="preserve">
+                                                <g><path d="M30.512,43.939c-2.348-0.676-4.696-1.019-6.98-1.019c-3.527,0-6.47,0.806-8.752,1.793    c2.2-8.054,7.485-21.951,18.013-23.516c0.975-0.145,1.774-0.85,2.04-1.799l2.301-8.23c0.194-0.696,0.079-1.441-0.318-2.045    s-1.035-1.007-1.75-1.105c-0.777-0.106-1.569-0.16-2.354-0.16c-12.637,0-25.152,13.19-30.433,32.076    c-3.1,11.08-4.009,27.738,3.627,38.223c4.273,5.867,10.507,9,18.529,9.313c0.033,0.001,0.065,0.002,0.098,0.002    c9.898,0,18.675-6.666,21.345-16.209c1.595-5.705,0.874-11.688-2.032-16.851C40.971,49.307,36.236,45.586,30.512,43.939z"/><path d="M92.471,54.413c-2.875-5.106-7.61-8.827-13.334-10.474c-2.348-0.676-4.696-1.019-6.979-1.019    c-3.527,0-6.471,0.806-8.753,1.793c2.2-8.054,7.485-21.951,18.014-23.516c0.975-0.145,1.773-0.85,2.04-1.799l2.301-8.23    c0.194-0.696,0.079-1.441-0.318-2.045c-0.396-0.604-1.034-1.007-1.75-1.105c-0.776-0.106-1.568-0.16-2.354-0.16    c-12.637,0-25.152,13.19-30.434,32.076c-3.099,11.08-4.008,27.738,3.629,38.225c4.272,5.866,10.507,9,18.528,9.312    c0.033,0.001,0.065,0.002,0.099,0.002c9.897,0,18.675-6.666,21.345-16.209C96.098,65.559,95.376,59.575,92.471,54.413z"/></g>
+                                                </svg>
+                                        </p>
+                                        <img src="https://bootstrapmade.com/demo/templates/Squadfree/assets/img/testimonials/testimonials-5.jpg">
+                                        <h3>Matt Brandon</h3>
+                                        <h4>Freelancer</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="testimonial-box col col-12 col-lg-4">
+                                    <div class="testimonial-item d-inline-block">
+                                        <p>
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  viewBox="0 0 95.333 95.332" style="enable-background:new 0 0 95.333 95.332;" xml:space="preserve">
+                                                <g><path d="M30.512,43.939c-2.348-0.676-4.696-1.019-6.98-1.019c-3.527,0-6.47,0.806-8.752,1.793    c2.2-8.054,7.485-21.951,18.013-23.516c0.975-0.145,1.774-0.85,2.04-1.799l2.301-8.23c0.194-0.696,0.079-1.441-0.318-2.045    s-1.035-1.007-1.75-1.105c-0.777-0.106-1.569-0.16-2.354-0.16c-12.637,0-25.152,13.19-30.433,32.076    c-3.1,11.08-4.009,27.738,3.627,38.223c4.273,5.867,10.507,9,18.529,9.313c0.033,0.001,0.065,0.002,0.098,0.002    c9.898,0,18.675-6.666,21.345-16.209c1.595-5.705,0.874-11.688-2.032-16.851C40.971,49.307,36.236,45.586,30.512,43.939z"/><path d="M92.471,54.413c-2.875-5.106-7.61-8.827-13.334-10.474c-2.348-0.676-4.696-1.019-6.979-1.019    c-3.527,0-6.471,0.806-8.753,1.793c2.2-8.054,7.485-21.951,18.014-23.516c0.975-0.145,1.773-0.85,2.04-1.799l2.301-8.23    c0.194-0.696,0.079-1.441-0.318-2.045c-0.396-0.604-1.034-1.007-1.75-1.105c-0.776-0.106-1.568-0.16-2.354-0.16    c-12.637,0-25.152,13.19-30.434,32.076c-3.099,11.08-4.008,27.738,3.629,38.225c4.272,5.866,10.507,9,18.528,9.312    c0.033,0.001,0.065,0.002,0.099,0.002c9.897,0,18.675-6.666,21.345-16.209C96.098,65.559,95.376,59.575,92.471,54.413z"/></g>
+                                                </svg>
+                                            Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam. 
+
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="second" viewBox="0 0 95.333 95.332" style="enable-background:new 0 0 95.333 95.332;" xml:space="preserve">
+                                                <g><path d="M30.512,43.939c-2.348-0.676-4.696-1.019-6.98-1.019c-3.527,0-6.47,0.806-8.752,1.793    c2.2-8.054,7.485-21.951,18.013-23.516c0.975-0.145,1.774-0.85,2.04-1.799l2.301-8.23c0.194-0.696,0.079-1.441-0.318-2.045    s-1.035-1.007-1.75-1.105c-0.777-0.106-1.569-0.16-2.354-0.16c-12.637,0-25.152,13.19-30.433,32.076    c-3.1,11.08-4.009,27.738,3.627,38.223c4.273,5.867,10.507,9,18.529,9.313c0.033,0.001,0.065,0.002,0.098,0.002    c9.898,0,18.675-6.666,21.345-16.209c1.595-5.705,0.874-11.688-2.032-16.851C40.971,49.307,36.236,45.586,30.512,43.939z"/><path d="M92.471,54.413c-2.875-5.106-7.61-8.827-13.334-10.474c-2.348-0.676-4.696-1.019-6.979-1.019    c-3.527,0-6.471,0.806-8.753,1.793c2.2-8.054,7.485-21.951,18.014-23.516c0.975-0.145,1.773-0.85,2.04-1.799l2.301-8.23    c0.194-0.696,0.079-1.441-0.318-2.045c-0.396-0.604-1.034-1.007-1.75-1.105c-0.776-0.106-1.568-0.16-2.354-0.16    c-12.637,0-25.152,13.19-30.434,32.076c-3.099,11.08-4.008,27.738,3.629,38.225c4.272,5.866,10.507,9,18.528,9.312    c0.033,0.001,0.065,0.002,0.099,0.002c9.897,0,18.675-6.666,21.345-16.209C96.098,65.559,95.376,59.575,92.471,54.413z"/></g>
+                                                </svg>
+                                        </p>
+                                        <img src="https://bootstrapmade.com/demo/templates/Squadfree/assets/img/testimonials/testimonials-1.jpg">
+                                        <h3>Matt Brandon</h3>
+                                        <h4>Freelancer</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- team-section -->
+        <div class="team">
+            <div class="container">
+                <div class="section-title">
+                    <h2 class="p-relative">
+                        <span class="p-relative">
+                        Team
+                        </span>
+                    </h2>
+                    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+                </div>
+                <div class="row">
+                    <div class="col col-12 col-md-6 col-lg-4">
+                        <div class="member p-relative">
+                            <div class="pic">
+                                <img src="https://bootstrapmade.com/demo/templates/Squadfree/assets/img/team/team-1.jpg">
+                            </div>
+                            <div class="member-info p-absolute">
+                                <h4 class="p-relative">Walter White</h4>
+                                <span>Chief Executive Officer</span>
+                                <div class="social">
+                                    <a href="#" target="_blank">
+                                        <i class="fa fa-instagram" aria-hidden="true"></i>
+                                    </a>
+                                    <a href="#" target="_blank">
+                                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                                    </a>
+                                    <a href="#" target="_blank">
+                                        <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                                    </a>
+                                    <a href="#" target="_blank">
+                                        <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-12 col-md-6 col-lg-4">
+                        <div class="member p-relative">
+                            <div class="pic">
+                                <img src="https://bootstrapmade.com/demo/templates/Squadfree/assets/img/team/team-2.jpg">
+                            </div>
+                            <div class="member-info p-absolute">
+                                <h4 class="p-relative">Sarah Jhonson</h4>
+                                <span>Product Manager</span>
+                                <div class="social">
+                                    <a href="#" target="_blank">
+                                        <i class="fa fa-instagram" aria-hidden="true"></i>
+                                    </a>
+                                    <a href="#" target="_blank">
+                                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                                    </a>
+                                    <a href="#" target="_blank">
+                                        <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                                    </a>
+                                    <a href="#" target="_blank">
+                                        <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-12 col-md-6 col-lg-4">
+                        <div class="member p-relative">
+                            <div class="pic">
+                                <img src="https://bootstrapmade.com/demo/templates/Squadfree/assets/img/team/team-3.jpg">
+                            </div>
+                            <div class="member-info p-absolute">
+                                <h4 class="p-relative">William Anderson</h4>
+                                <span>CTO</span>
+                                <div class="social">
+                                    <a href="#" target="_blank">
+                                        <i class="fa fa-instagram" aria-hidden="true"></i>
+                                    </a>
+                                    <a href="#" target="_blank">
+                                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                                    </a>
+                                    <a href="#" target="_blank">
+                                        <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                                    </a>
+                                    <a href="#" target="_blank">
+                                        <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- contact -->
+        <div class="contact">
+            <div class="container">
+                <div class="section-title">
+                    <h2 class="p-relative">
+                        <span class="p-relative">
+                        Contact
+                        </span>
+                    </h2>
+                    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+                </div>
+                <div class="row">
+                    <div class="col col-12 col-md-6">
+                        <div class="col-box">
+                            <div class="box-svg">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 511.999 511.999" style="enable-background:new 0 0 511.999 511.999;" xml:space="preserve">
+                                    <g><path d="M442.747,391.465c-34.764-10.565-77.674-17.804-124.537-21.203c-6.934,10.297-13.651,20.026-19.942,28.984    c18.92,1.237,36.314,3.302,50.941,6.111c22.672,4.356,48.698,11.804,48.698,30.916c0,19.111-26.025,26.56-48.698,30.914    c-25.033,4.808-58.136,7.456-93.21,7.456c-35.073,0-68.177-2.647-93.21-7.456c-22.672-4.354-48.698-11.804-48.698-30.914    c0-19.111,26.025-26.56,48.698-30.916c14.753-2.834,32.32-4.91,51.43-6.143c-6.388-8.952-13.204-18.677-20.238-28.966    c-46.938,3.393-89.919,10.636-124.731,21.218C18.137,407.001,0,425.313,0,436.274c0,10.961,18.137,29.273,69.253,44.807    c49.689,15.102,116.009,23.418,186.747,23.418s137.058-8.317,186.747-23.418c51.115-15.534,69.253-33.846,69.253-44.807    C511.999,425.313,493.863,407.001,442.747,391.465z"/><path d="M279.255,425.818c-0.982,1.348-1.95,2.672-2.882,3.944c-4.686,6.392-11.917,10.078-19.841,10.109    c-0.033,0-0.069,0-0.103,0c-7.882,0-15.098-3.621-19.814-9.948c-0.991-1.329-2.021-2.717-3.069-4.132    c-39.659,1.339-67.38,6.076-82.104,10.482c17.361,5.195,52.787,10.854,104.559,10.854s87.197-5.659,104.559-10.854    C345.933,431.898,318.489,427.192,279.255,425.818z"/><path d="M256.024,7.499c-0.091,0-0.182,0-0.272,0c-77.436,0.138-140.324,63.25-140.188,140.687    c0.095,53.612,72.388,170.009,140.852,262.252c68.181-93.417,140.115-211.082,140.019-264.745    C396.297,68.152,334.643,7.499,256.024,7.499z M256.096,206.362c-0.03,0-0.066,0-0.096,0c-29.455,0-53.442-23.934-53.494-53.401    c-0.054-29.497,23.902-53.538,53.399-53.59c0.032,0,0.066,0,0.099,0c14.252,0,27.658,5.538,37.755,15.6    c10.122,10.086,15.71,23.51,15.737,37.8C309.547,182.268,285.593,206.309,256.096,206.362z"/></g>
+                                </svg>
+                            </div>
+                            <h3>Our Address</h3>
+                            <p>A108 Adam Street, New York, NY 535022</p>
+                        </div>
+                    </div>
+                    <div class="col col-12 col-md-3">
+                        <div class="col-box">
+                        <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                        <h3>E-mail</h3>
+                        <p>contact@example.com</p>
+                        </div>
+                    </div>
+                    <div class="col col-12 col-md-3">
+                        <div class="col-box">
+                            <i class="fa fa-phone" aria-hidden="true"></i>
+                            <h3>Call US</h3>
+                            <p>+1 5589 55488 55</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-12 col-md-6 first-col">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14874.186690143348!2d72.8643088!3d21.2498177!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04f2b5e326bb9%3A0xb1d381a35972d1ca!2sRajwadi%20Party%20Plot!5e0!3m2!1sen!2sin!4v1665577226361!5m2!1sen!2sin" width="100%" height="320" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div class="col col-12 col-md-6 first-col">
+                        <form >
+                            <div class="row">
+                                <div class="col col-6">
+                                    <div class="input-box">
+                                        <input type="text" placeholder="Your name">
+                                    </div>
+                                </div>
+                                <div class="col col-6">
+                                    <div class="input-box">
+                                        <input type="email" placeholder="Enter E-mail">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sub-in">
+                                <input type="text" placeholder="Subject">
+                            </div>
+                            <div class="massge-in">
+                                <textarea name="massage" cols="30" rows="7" placeholder="Massage"></textarea>
+                            </div>
+                            <div class="send-btn">
+                                <a href="#" target="_blank">Send Massage</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- footer -->
+        <footer>
+            <div class="container">
+                <div class="footer-top">
+                    <div class="row">
+                        <div class="col col-12 col-lg-4">
+                            <div class="footer-info">
+                                <h3>Squadfree</h3>
+                                <p class="para">Qui repudiandae et eum dolores alias sed ea. Qui suscipit veniam excepturi quod.</p>
+                                <p>
+                                     A108 Adam Street 
+                                    <br>
+                                     NY 535022, USA
+                                    <br>
+                                    <strong>Phone:</strong> +1 5589 55488 55
+                                    <strong>Email:</strong>info@example.com
+                                </p>
+                                <div class="social-one">
+                                    <a href="#" target="_blank">
+                                        <i class="fa fa-instagram" aria-hidden="true"></i>
+                                    </a>
+                                    <a href="#" target="_blank">
+                                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                                    </a>
+                                    <a href="#" target="_blank">
+                                        <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                                    </a>
+                                    <a href="#" target="_blank">
+                                        <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="d-lg-none">
+                                <br>
+                                <br>
+                            </div>
+                        </div>
+                        <div class="col col-12 col-sm-6 col-md-3 col-lg-2">
+                            <h4>Useful Link</h4>
+                            <ul>
+                                <li>
+                                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                    <a href="#" target="_blank">Home</a>
+                                </li>
+                                <li>
+                                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                    <a href="#" target="_blank">About US</a>
+                                </li>
+                                <li>
+                                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                    <a href="#" target="_blank">Service</a>
+                                </li>
+                                <li>
+                                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                    <a href="#" target="_blank">Terms Of Service</a>
+                                </li>
+                                <li>
+                                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                    <a href="#" target="_blank">Privacy policy</a>
+                                </li>
+                            </ul>
+                            <div class="d-lg-none">
+                                <br>
+                                <br>
+                            </div>
+                        </div>
+                        <div class="col col-12 col-sm-6 col-md-4 col-lg-2">
+                            <h4>Our Service</h4>
+                            <ul>
+                                <li>
+                                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                    <a href="#" target="_blank">Web Design</a>
+                                </li>
+                                <li>
+                                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                    <a href="#" target="_blank">Web Development</a>
+                                </li>
+                                <li>
+                                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                    <a href="#" target="_blank">Product Menagement</a>
+                                </li>
+                                <li>
+                                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                    <a href="#" target="_blank">Marketing</a>
+                                </li>
+                                <li>
+                                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                    <a href="#" target="_blank">Graphic Design</a>
+                                </li>
+                            </ul>
+                            <div class="d-lg-none">
+                                <br>
+                                <br>
+                            </div>
+                        </div>
+                        <div class="col col-12 col-md-5 col-lg-4">
+                            <h4>Our Newslatter</h4>
+                            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+                            <form class="p-relative"> 
+                                <input type="email" placeholder="Your Email">
+                                <input type="submit">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <div class="copyright">
+                        @ copyright
+                        <strong>
+                            <span>Squadfree</span>
+                        </strong>
+                        . All Rights Reserved
+                    </div>
+                    <div class="credits">
+                        Designed By
+                        <a href="#" target="_blank">BootstrapMade</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+    <!-- JQ CDN -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://kenwheeler.github.io/slick/slick/slick.js"></script>
+
+
+    <script>
+        $(document).ready(function(){
+            $('.testimonial-slider').slick({
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                arrows: true,
+                dots: true,
+                infinite: true,
+                responsive: [
+                    {
+                        breakpoint: 992,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 2
+                        }
+                    },
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
+            });
+        });
+    </script>
+
+
+</body>
+</html>
